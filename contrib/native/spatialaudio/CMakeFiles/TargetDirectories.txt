@@ -1,9 +1,0 @@
-/home/boogie/vlc/contrib/native/spatialaudio/CMakeFiles/install/local.dir
-/home/boogie/vlc/contrib/native/spatialaudio/CMakeFiles/install.dir
-/home/boogie/vlc/contrib/native/spatialaudio/CMakeFiles/package.dir
-/home/boogie/vlc/contrib/native/spatialaudio/CMakeFiles/package_source.dir
-/home/boogie/vlc/contrib/native/spatialaudio/CMakeFiles/install/strip.dir
-/home/boogie/vlc/contrib/native/spatialaudio/CMakeFiles/spatialaudio.dir
-/home/boogie/vlc/contrib/native/spatialaudio/CMakeFiles/edit_cache.dir
-/home/boogie/vlc/contrib/native/spatialaudio/CMakeFiles/rebuild_cache.dir
-/home/boogie/vlc/contrib/native/spatialaudio/CMakeFiles/list_install_components.dir

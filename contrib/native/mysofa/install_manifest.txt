@@ -1,3 +1,0 @@
-/home/boogie/vlc/contrib/x86_64-linux-gnu/share/libmysofa/default.sofa
-/home/boogie/vlc/contrib/x86_64-linux-gnu/lib/libmysofa.a
-/home/boogie/vlc/contrib/x86_64-linux-gnu/include/mysofa.h

@@ -1,2 +1,0 @@
-/usr/bin/ar qc libaom_version.a  CMakeFiles/aom_version.dir/aom_version_dummy.c.o
-/usr/bin/ranlib libaom_version.a
