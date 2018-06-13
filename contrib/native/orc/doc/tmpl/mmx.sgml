@@ -1,0 +1,187 @@
+<!-- ##### SECTION Title ##### -->
+mmx
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### MACRO ORC_MMX_SHUF ##### -->
+<para>
+
+</para>
+
+@a: 
+@b: 
+@c: 
+@d: 
+
+
+<!-- ##### FUNCTION orc_mmx_emit_0f ##### -->
+<para>
+
+</para>
+
+@p: 
+@insn_name: 
+@code: 
+@src: 
+@dest: 
+
+
+<!-- ##### FUNCTION orc_mmx_emit_660f ##### -->
+<para>
+
+</para>
+
+@p: 
+@insn_name: 
+@code: 
+@src: 
+@dest: 
+
+
+<!-- ##### FUNCTION orc_mmx_emit_f20f ##### -->
+<para>
+
+</para>
+
+@p: 
+@insn_name: 
+@code: 
+@src: 
+@dest: 
+
+
+<!-- ##### FUNCTION orc_mmx_emit_f30f ##### -->
+<para>
+
+</para>
+
+@p: 
+@insn_name: 
+@code: 
+@src: 
+@dest: 
+
+
+<!-- ##### FUNCTION orc_mmx_emit_loadib ##### -->
+<para>
+
+</para>
+
+@p: 
+@reg: 
+@value: 
+
+
+<!-- ##### FUNCTION orc_mmx_emit_loadil ##### -->
+<para>
+
+</para>
+
+@p: 
+@reg: 
+@value: 
+
+
+<!-- ##### FUNCTION orc_mmx_emit_loadiw ##### -->
+<para>
+
+</para>
+
+@p: 
+@reg: 
+@value: 
+
+
+<!-- ##### FUNCTION orc_mmx_emit_loadpb ##### -->
+<para>
+
+</para>
+
+@p: 
+@reg: 
+@value: 
+
+
+<!-- ##### FUNCTION orc_mmx_emit_loadpl ##### -->
+<para>
+
+</para>
+
+@p: 
+@reg: 
+@value: 
+
+
+<!-- ##### FUNCTION orc_mmx_emit_loadpq ##### -->
+<para>
+
+</para>
+
+@p: 
+@reg: 
+@value: 
+
+
+<!-- ##### FUNCTION orc_mmx_emit_loadpw ##### -->
+<para>
+
+</para>
+
+@p: 
+@reg: 
+@value: 
+
+
+<!-- ##### FUNCTION orc_mmx_emit_pshufw ##### -->
+<para>
+
+</para>
+
+@p: 
+@shuf: 
+@src: 
+@dest: 
+
+
+<!-- ##### FUNCTION orc_mmx_emit_shiftimm ##### -->
+<para>
+
+</para>
+
+@p: 
+@insn_name: 
+@code: 
+@modrm_code: 
+@shift: 
+@reg: 
+
+
+<!-- ##### FUNCTION orc_mmx_get_cpu_flags ##### -->
+<para>
+
+</para>
+
+@Returns: 
+
+
+<!-- ##### FUNCTION orc_mmx_init ##### -->
+<para>
+
+</para>
+
+
+

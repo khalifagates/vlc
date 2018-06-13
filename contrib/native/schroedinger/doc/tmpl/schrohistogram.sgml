@@ -1,0 +1,87 @@
+<!-- ##### SECTION Title ##### -->
+schrohistogram
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### FUNCTION schro_histogram_table_generate ##### -->
+<para>
+
+</para>
+
+@table: 
+@int value, void *priv:
+@int value, void *priv:
+@int value, void *priv:
+@int value, void *priv:
+@int value, void *priv:
+@int value, void *priv:
+@int value, void *priv:
+@int value, void *priv:
+@int value, void *priv:
+@int value, void *priv:
+@int value, void *priv:
+@int value, void *priv:
+@int value, void *priv:
+@int value, void *priv:
+@int value, void *priv:
+@int value, void *priv:
+@int value, void *priv:
+@int value, void *priv:
+@int value, void *priv:
+@int value, void *priv:
+@int value, void *priv:
+@int value, void *priv:
+@int value, void *priv:
+@int value, void *priv:
+@int value, void *priv:
+@int value, void *priv:
+@int value, void *priv:
+@int value, void *priv:
+@int value, void *priv:
+@int value, void *priv:
+@int value, void *priv:
+@int value, void *priv:
+@int value, void *priv:
+@int value, void *priv:
+@int value, void *priv:
+@int value, void *priv:
+@int value, void *priv:
+@int value, void *priv:
+@int value, void *priv:
+@int value, void *priv:
+@int value, void *priv:
+@int value, void *priv:
+@int value, void *priv:
+@int value, void *priv:
+@int value, void *priv:
+@int value, void *priv:
+@int value, void *priv:
+@int value, void *priv:
+@int value, void *priv:
+@int value, void *priv:
+@int value, void *priv:
+@int value, void *priv:
+@int value, void *priv:
+@int value, void *priv:
+@int value, void *priv:
+@func: 
+@priv: 
+
+

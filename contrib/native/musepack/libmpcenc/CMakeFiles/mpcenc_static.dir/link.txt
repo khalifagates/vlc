@@ -1,0 +1,2 @@
+/usr/bin/ar qc libmpcenc_static.a  CMakeFiles/mpcenc_static.dir/analy_filter.o CMakeFiles/mpcenc_static.dir/bitstream.o CMakeFiles/mpcenc_static.dir/encode_sv7.o CMakeFiles/mpcenc_static.dir/huffsv7.o CMakeFiles/mpcenc_static.dir/quant.o CMakeFiles/mpcenc_static.dir/__/common/crc32.o
+/usr/bin/ranlib libmpcenc_static.a

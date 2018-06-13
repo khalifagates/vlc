@@ -1,0 +1,56 @@
+/* Copyright (C) 2008 Vincent Penquerc'h.
+   This file is part of the Tiger rendering library.
+   Written by Vincent Penquerc'h.
+
+   This library is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+   License as published by the Free Software Foundation; either
+   version 2.1 of the License, or (at your option) any later version.
+  
+   This library is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.	 See the GNU
+   Lesser General Public License for more details.
+  
+   You should have received a copy of the GNU Lesser General Public
+   License along with this library; if not, write to the
+   Free Software Foundation, Inc., 59 Temple Place - Suite 330,
+   Boston, MA 02111-1307, USA. */
+
+
+/**
+
+\mainpage
+
+\section Introduction
+
+This is the documentation for libtiger.
+
+libtiger is a rendering library for Kate streams using Pango and Cairo.
+
+The latest version of libtiger may be found at <http://libtiger.googlecode.com/>.
+
+The Kate bitstream format is a timed text codec designed for embedding
+in an Ogg bitstream. It was originally designed for karaoke and text.
+The Kate bitstream format is documented in the libkate documentation.
+
+Typically, Kate streams would be rendered as overlays over a video, for, eg,
+movie subtitles.
+
+The libtiger source is thread safe, as long as a single thread accesses
+a given tiger_renderer object. However, Pango and Cairo are not themselves
+fully thread safe, so using libtiger concurrently from different threads
+may cause problems. Refer to Pango and Cairo documentation for more details
+about using them in multithreaded programs.
+
+A few notes about \ref Performance "performance".
+
+\htmlonly
+A commented
+<a href="high_8c-example.html">example</a>.
+\endhtmlonly
+
+\example simple.c
+
+*/
+

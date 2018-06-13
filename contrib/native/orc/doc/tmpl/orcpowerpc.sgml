@@ -1,0 +1,232 @@
+<!-- ##### SECTION Title ##### -->
+orcpowerpc
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### FUNCTION powerpc_get_regname ##### -->
+<para>
+
+</para>
+
+@i: 
+@Returns: 
+
+
+<!-- ##### FUNCTION powerpc_regnum ##### -->
+<para>
+
+</para>
+
+@i: 
+@Returns: 
+
+
+<!-- ##### FUNCTION powerpc_add_fixup ##### -->
+<para>
+
+</para>
+
+@compiler: 
+@type: 
+@ptr: 
+@label: 
+
+
+<!-- ##### FUNCTION powerpc_do_fixups ##### -->
+<para>
+
+</para>
+
+@compiler: 
+
+
+<!-- ##### FUNCTION powerpc_emit ##### -->
+<para>
+
+</para>
+
+@compiler: 
+@insn: 
+
+
+<!-- ##### FUNCTION powerpc_emit_655510 ##### -->
+<para>
+
+</para>
+
+@compiler: 
+@major: 
+@d: 
+@a: 
+@b: 
+@minor: 
+
+
+<!-- ##### FUNCTION powerpc_emit_VA ##### -->
+<para>
+
+</para>
+
+@compiler: 
+@name: 
+@insn: 
+@d: 
+@a: 
+@b: 
+@c: 
+
+
+<!-- ##### FUNCTION powerpc_emit_VX ##### -->
+<para>
+
+</para>
+
+@compiler: 
+@insn: 
+@d: 
+@a: 
+@b: 
+
+
+<!-- ##### FUNCTION powerpc_emit_VX_2 ##### -->
+<para>
+
+</para>
+
+@p: 
+@name: 
+@insn: 
+@d: 
+@a: 
+@b: 
+
+
+<!-- ##### FUNCTION powerpc_emit_X ##### -->
+<para>
+
+</para>
+
+@compiler: 
+@insn: 
+@d: 
+@a: 
+@b: 
+
+
+<!-- ##### FUNCTION powerpc_emit_addi ##### -->
+<para>
+
+</para>
+
+@compiler: 
+@regd: 
+@rega: 
+@imm: 
+
+
+<!-- ##### FUNCTION powerpc_emit_b ##### -->
+<para>
+
+</para>
+
+@compiler: 
+@label: 
+
+
+<!-- ##### FUNCTION powerpc_emit_beq ##### -->
+<para>
+
+</para>
+
+@compiler: 
+@label: 
+
+
+<!-- ##### FUNCTION powerpc_emit_bne ##### -->
+<para>
+
+</para>
+
+@compiler: 
+@label: 
+
+
+<!-- ##### FUNCTION powerpc_emit_label ##### -->
+<para>
+
+</para>
+
+@compiler: 
+@label: 
+
+
+<!-- ##### FUNCTION powerpc_emit_lwz ##### -->
+<para>
+
+</para>
+
+@compiler: 
+@regd: 
+@rega: 
+@imm: 
+
+
+<!-- ##### FUNCTION powerpc_emit_ret ##### -->
+<para>
+
+</para>
+
+@compiler: 
+
+
+<!-- ##### FUNCTION powerpc_emit_srawi ##### -->
+<para>
+
+</para>
+
+@compiler: 
+@regd: 
+@rega: 
+@shift: 
+@record: 
+
+
+<!-- ##### FUNCTION powerpc_emit_stwu ##### -->
+<para>
+
+</para>
+
+@compiler: 
+@regs: 
+@rega: 
+@offset: 
+
+
+<!-- ##### FUNCTION powerpc_get_constant ##### -->
+<para>
+
+</para>
+
+@p: 
+@type: 
+@value: 
+@Returns: 
+
+

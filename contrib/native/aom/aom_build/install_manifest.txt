@@ -1,0 +1,12 @@
+/home/boogie/vlc/contrib/x86_64-linux-gnu/include/aom/aom.h
+/home/boogie/vlc/contrib/x86_64-linux-gnu/include/aom/aom_codec.h
+/home/boogie/vlc/contrib/x86_64-linux-gnu/include/aom/aom_frame_buffer.h
+/home/boogie/vlc/contrib/x86_64-linux-gnu/include/aom/aom_image.h
+/home/boogie/vlc/contrib/x86_64-linux-gnu/include/aom/aom_integer.h
+/home/boogie/vlc/contrib/x86_64-linux-gnu/include/aom/aom.h
+/home/boogie/vlc/contrib/x86_64-linux-gnu/include/aom/aom_decoder.h
+/home/boogie/vlc/contrib/x86_64-linux-gnu/include/aom/aomdx.h
+/home/boogie/vlc/contrib/x86_64-linux-gnu/include/aom/aomcx.h
+/home/boogie/vlc/contrib/x86_64-linux-gnu/include/aom/aom_encoder.h
+/home/boogie/vlc/contrib/x86_64-linux-gnu/lib/pkgconfig/aom.pc
+/home/boogie/vlc/contrib/x86_64-linux-gnu/lib/libaom.a

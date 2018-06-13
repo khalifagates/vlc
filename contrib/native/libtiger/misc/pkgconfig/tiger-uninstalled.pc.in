@@ -1,0 +1,15 @@
+# This is the pkg-config file for libtiger
+prefix=
+exec_prefix=
+libdir=${pcfiledir}/../../lib
+includedir=${pcfiledir}/../../include
+
+Name: Tiger
+Description: libtiger is a library for rendering Kate streams (not installed)
+Version: @VERSION@
+URL: http://libtiger.googlecode.com/
+Requires: kate >= 0.1.7 pangocairo
+Conflicts: 
+Libs: ${libdir}/.libs/libtiger.a
+Libs.private: @PTHREAD_LIBS@ -lm
+Cflags: -I${includedir}

@@ -1,0 +1,224 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" 
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd">
+<refentry id="schroedinger-schroarith">
+<refmeta>
+<refentrytitle role="top_of_page" id="schroedinger-schroarith.top_of_page">schroarith</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>
+  SCHROEDINGER Library
+</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>schroarith</refname>
+<refpurpose></refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="schroedinger-schroarith.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+
+<synopsis>struct              <link linkend="SchroArith">SchroArith</link>;
+struct              <link linkend="SchroArithContext">SchroArithContext</link>;
+<link linkend="SchroArith"><returnvalue>SchroArith</returnvalue></link> *        <link linkend="schro-arith-new">schro_arith_new</link>                     (<parameter><type>void</type></parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="schro-arith-free">schro_arith_free</link>                    (<parameter><link linkend="SchroArith"><type>SchroArith</type></link> *arith</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="schro-arith-decode-init">schro_arith_decode_init</link>             (<parameter><link linkend="SchroArith"><type>SchroArith</type></link> *arith</parameter>,
+                                                         <parameter><link linkend="SchroBuffer"><type>SchroBuffer</type></link> *buffer</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="schro-arith-encode-init">schro_arith_encode_init</link>             (<parameter><link linkend="SchroArith"><type>SchroArith</type></link> *arith</parameter>,
+                                                         <parameter><link linkend="SchroBuffer"><type>SchroBuffer</type></link> *buffer</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="schro-arith-flush">schro_arith_flush</link>                   (<parameter><link linkend="SchroArith"><type>SchroArith</type></link> *arith</parameter>);
+<link linkend="int"><returnvalue>int</returnvalue></link>                 <link linkend="schro-arith-decode-bit">schro_arith_decode_bit</link>              (<parameter><link linkend="SchroArith"><type>SchroArith</type></link> *arith</parameter>,
+                                                         <parameter>unsigned <link linkend="int"><type>int</type></link> context</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="schro-arith-decode-flush">schro_arith_decode_flush</link>            (<parameter><link linkend="SchroArith"><type>SchroArith</type></link> *arith</parameter>);
+<link linkend="int"><returnvalue>int</returnvalue></link>                 <link linkend="schro-arith-decode-sint">schro_arith_decode_sint</link>             (<parameter><link linkend="SchroArith"><type>SchroArith</type></link> *arith</parameter>,
+                                                         <parameter>unsigned <link linkend="int"><type>int</type></link> cont_context</parameter>,
+                                                         <parameter>unsigned <link linkend="int"><type>int</type></link> value_context</parameter>,
+                                                         <parameter>unsigned <link linkend="int"><type>int</type></link> sign_context</parameter>);
+<link linkend="int"><returnvalue>int</returnvalue></link>                 <link linkend="schro-arith-decode-uint">schro_arith_decode_uint</link>             (<parameter><link linkend="SchroArith"><type>SchroArith</type></link> *arith</parameter>,
+                                                         <parameter>unsigned <link linkend="int"><type>int</type></link> cont_context</parameter>,
+                                                         <parameter>unsigned <link linkend="int"><type>int</type></link> value_context</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="schro-arith-encode-bit">schro_arith_encode_bit</link>              (<parameter><link linkend="SchroArith"><type>SchroArith</type></link> *arith</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> context</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> value</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="schro-arith-encode-sint">schro_arith_encode_sint</link>             (<parameter><link linkend="SchroArith"><type>SchroArith</type></link> *arith</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> cont_context</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> value_context</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> sign_context</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> value</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="schro-arith-encode-uint">schro_arith_encode_uint</link>             (<parameter><link linkend="SchroArith"><type>SchroArith</type></link> *arith</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> cont_context</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> value_context</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> value</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="schro-arith-estimate-init">schro_arith_estimate_init</link>           (<parameter><link linkend="SchroArith"><type>SchroArith</type></link> *arith</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="schro-arith-estimate-sint">schro_arith_estimate_sint</link>           (<parameter><link linkend="SchroArith"><type>SchroArith</type></link> *arith</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> cont_context</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> value_context</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> sign_context</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> value</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="schro-arith-estimate-uint">schro_arith_estimate_uint</link>           (<parameter><link linkend="SchroArith"><type>SchroArith</type></link> *arith</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> cont_context</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> value_context</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> value</parameter>);
+</synopsis>
+</refsynopsisdiv>
+
+<refsect1 id="schroedinger-schroarith.description" role="desc">
+<title role="desc.title">Description</title>
+<para>
+</para>
+</refsect1>
+<refsect1 id="schroedinger-schroarith.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="SchroArith" role="struct">
+<title>struct SchroArith</title>
+<indexterm zone="SchroArith"><primary>SchroArith</primary></indexterm>
+<programlisting>struct SchroArith {
+  SchroBuffer *buffer;
+  uint8_t *dataptr;
+  uintptr_t offset;
+
+  uint32_t range[2];
+  uint32_t code;
+  uint32_t range_size;
+  int cntr;
+  int carry;
+
+  uint16_t probabilities[SCHRO_CTX_LAST];
+  uint16_t lut[512];
+  SchroArithContext contexts[SCHRO_CTX_LAST];
+};
+</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="SchroArithContext" role="struct">
+<title>struct SchroArithContext</title>
+<indexterm zone="SchroArithContext"><primary>SchroArithContext</primary></indexterm>
+<programlisting>struct SchroArithContext {
+  unsigned int next;
+#ifdef unused
+  int stat_range;
+  int n_bits;
+  int n_symbols;
+  int ones;
+#endif
+};
+</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="schro-arith-new" role="function">
+<title>schro_arith_new ()</title>
+<indexterm zone="schro-arith-new"><primary>schro_arith_new</primary></indexterm>
+<programlisting><link linkend="SchroArith"><returnvalue>SchroArith</returnvalue></link> *        schro_arith_new                     (<parameter><type>void</type></parameter>);</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="schro-arith-free" role="function">
+<title>schro_arith_free ()</title>
+<indexterm zone="schro-arith-free"><primary>schro_arith_free</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                schro_arith_free                    (<parameter><link linkend="SchroArith"><type>SchroArith</type></link> *arith</parameter>);</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="schro-arith-decode-init" role="function">
+<title>schro_arith_decode_init ()</title>
+<indexterm zone="schro-arith-decode-init"><primary>schro_arith_decode_init</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                schro_arith_decode_init             (<parameter><link linkend="SchroArith"><type>SchroArith</type></link> *arith</parameter>,
+                                                         <parameter><link linkend="SchroBuffer"><type>SchroBuffer</type></link> *buffer</parameter>);</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="schro-arith-encode-init" role="function">
+<title>schro_arith_encode_init ()</title>
+<indexterm zone="schro-arith-encode-init"><primary>schro_arith_encode_init</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                schro_arith_encode_init             (<parameter><link linkend="SchroArith"><type>SchroArith</type></link> *arith</parameter>,
+                                                         <parameter><link linkend="SchroBuffer"><type>SchroBuffer</type></link> *buffer</parameter>);</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="schro-arith-flush" role="function">
+<title>schro_arith_flush ()</title>
+<indexterm zone="schro-arith-flush"><primary>schro_arith_flush</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                schro_arith_flush                   (<parameter><link linkend="SchroArith"><type>SchroArith</type></link> *arith</parameter>);</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="schro-arith-decode-bit" role="function">
+<title>schro_arith_decode_bit ()</title>
+<indexterm zone="schro-arith-decode-bit"><primary>schro_arith_decode_bit</primary></indexterm>
+<programlisting><link linkend="int"><returnvalue>int</returnvalue></link>                 schro_arith_decode_bit              (<parameter><link linkend="SchroArith"><type>SchroArith</type></link> *arith</parameter>,
+                                                         <parameter>unsigned <link linkend="int"><type>int</type></link> context</parameter>);</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="schro-arith-decode-flush" role="function">
+<title>schro_arith_decode_flush ()</title>
+<indexterm zone="schro-arith-decode-flush"><primary>schro_arith_decode_flush</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                schro_arith_decode_flush            (<parameter><link linkend="SchroArith"><type>SchroArith</type></link> *arith</parameter>);</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="schro-arith-decode-sint" role="function">
+<title>schro_arith_decode_sint ()</title>
+<indexterm zone="schro-arith-decode-sint"><primary>schro_arith_decode_sint</primary></indexterm>
+<programlisting><link linkend="int"><returnvalue>int</returnvalue></link>                 schro_arith_decode_sint             (<parameter><link linkend="SchroArith"><type>SchroArith</type></link> *arith</parameter>,
+                                                         <parameter>unsigned <link linkend="int"><type>int</type></link> cont_context</parameter>,
+                                                         <parameter>unsigned <link linkend="int"><type>int</type></link> value_context</parameter>,
+                                                         <parameter>unsigned <link linkend="int"><type>int</type></link> sign_context</parameter>);</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="schro-arith-decode-uint" role="function">
+<title>schro_arith_decode_uint ()</title>
+<indexterm zone="schro-arith-decode-uint"><primary>schro_arith_decode_uint</primary></indexterm>
+<programlisting><link linkend="int"><returnvalue>int</returnvalue></link>                 schro_arith_decode_uint             (<parameter><link linkend="SchroArith"><type>SchroArith</type></link> *arith</parameter>,
+                                                         <parameter>unsigned <link linkend="int"><type>int</type></link> cont_context</parameter>,
+                                                         <parameter>unsigned <link linkend="int"><type>int</type></link> value_context</parameter>);</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="schro-arith-encode-bit" role="function">
+<title>schro_arith_encode_bit ()</title>
+<indexterm zone="schro-arith-encode-bit"><primary>schro_arith_encode_bit</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                schro_arith_encode_bit              (<parameter><link linkend="SchroArith"><type>SchroArith</type></link> *arith</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> context</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> value</parameter>);</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="schro-arith-encode-sint" role="function">
+<title>schro_arith_encode_sint ()</title>
+<indexterm zone="schro-arith-encode-sint"><primary>schro_arith_encode_sint</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                schro_arith_encode_sint             (<parameter><link linkend="SchroArith"><type>SchroArith</type></link> *arith</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> cont_context</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> value_context</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> sign_context</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> value</parameter>);</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="schro-arith-encode-uint" role="function">
+<title>schro_arith_encode_uint ()</title>
+<indexterm zone="schro-arith-encode-uint"><primary>schro_arith_encode_uint</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                schro_arith_encode_uint             (<parameter><link linkend="SchroArith"><type>SchroArith</type></link> *arith</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> cont_context</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> value_context</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> value</parameter>);</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="schro-arith-estimate-init" role="function">
+<title>schro_arith_estimate_init ()</title>
+<indexterm zone="schro-arith-estimate-init"><primary>schro_arith_estimate_init</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                schro_arith_estimate_init           (<parameter><link linkend="SchroArith"><type>SchroArith</type></link> *arith</parameter>);</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="schro-arith-estimate-sint" role="function">
+<title>schro_arith_estimate_sint ()</title>
+<indexterm zone="schro-arith-estimate-sint"><primary>schro_arith_estimate_sint</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                schro_arith_estimate_sint           (<parameter><link linkend="SchroArith"><type>SchroArith</type></link> *arith</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> cont_context</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> value_context</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> sign_context</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> value</parameter>);</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="schro-arith-estimate-uint" role="function">
+<title>schro_arith_estimate_uint ()</title>
+<indexterm zone="schro-arith-estimate-uint"><primary>schro_arith_estimate_uint</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                schro_arith_estimate_uint           (<parameter><link linkend="SchroArith"><type>SchroArith</type></link> *arith</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> cont_context</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> value_context</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> value</parameter>);</programlisting>
+<para>
+</para></refsect2>
+
+</refsect1>
+
+</refentry>

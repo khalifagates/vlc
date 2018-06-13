@@ -1,0 +1,351 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" 
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd">
+<refentry id="schroedinger-schromotion">
+<refmeta>
+<refentrytitle role="top_of_page" id="schroedinger-schromotion.top_of_page">schromotion</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>
+  SCHROEDINGER Library
+</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>schromotion</refname>
+<refpurpose></refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="schroedinger-schromotion.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+
+<synopsis>struct              <link linkend="SchroMotion">SchroMotion</link>;
+#define             <link linkend="SCHRO-MOTION-GET-BLOCK:CAPS">SCHRO_MOTION_GET_BLOCK</link>              (motion,
+                                                         x,
+                                                         y)
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="schro-motion-dc-prediction">schro_motion_dc_prediction</link>          (<parameter><link linkend="SchroMotion"><type>SchroMotion</type></link> *motion</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> x</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> y</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> *pred</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="schro-motion-vector-prediction">schro_motion_vector_prediction</link>      (<parameter><link linkend="SchroMotion"><type>SchroMotion</type></link> *motion</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> x</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> y</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> *pred_x</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> *pred_y</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> mode</parameter>);
+<link linkend="int"><returnvalue>int</returnvalue></link>                 <link linkend="schro-motion-split-prediction">schro_motion_split_prediction</link>       (<parameter><link linkend="SchroMotion"><type>SchroMotion</type></link> *motion</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> x</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> y</parameter>);
+<link linkend="int"><returnvalue>int</returnvalue></link>                 <link linkend="schro-motion-get-mode-prediction">schro_motion_get_mode_prediction</link>    (<parameter><link linkend="SchroMotion"><type>SchroMotion</type></link> *motion</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> x</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> y</parameter>);
+<link linkend="int"><returnvalue>int</returnvalue></link>                 <link linkend="schro-motion-block-estimate-entropy">schro_motion_block_estimate_entropy</link> (<parameter><link linkend="SchroMotion"><type>SchroMotion</type></link> *motion</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> i</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> j</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="schro-motion-copy-from">schro_motion_copy_from</link>              (<parameter><link linkend="SchroMotion"><type>SchroMotion</type></link> *motion</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> i</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> j</parameter>,
+                                                         <parameter><link linkend="SchroBlock"><type>SchroBlock</type></link> *block</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="schro-motion-copy-to">schro_motion_copy_to</link>                (<parameter><link linkend="SchroMotion"><type>SchroMotion</type></link> *motion</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> i</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> j</parameter>,
+                                                         <parameter><link linkend="SchroBlock"><type>SchroBlock</type></link> *block</parameter>);
+<link linkend="int"><returnvalue>int</returnvalue></link>                 <link linkend="schro-motion-estimate-entropy">schro_motion_estimate_entropy</link>       (<parameter><link linkend="SchroMotion"><type>SchroMotion</type></link> *motion</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="schro-motion-field-lshift">schro_motion_field_lshift</link>           (<parameter><link linkend="SchroMotionField"><type>SchroMotionField</type></link> *mf</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> n</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="schro-motion-free">schro_motion_free</link>                   (<parameter><link linkend="SchroMotion"><type>SchroMotion</type></link> *motion</parameter>);
+<link linkend="int"><returnvalue>int</returnvalue></link>                 <link linkend="schro-motion-get-global-prediction">schro_motion_get_global_prediction</link>  (<parameter><link linkend="SchroMotion"><type>SchroMotion</type></link> *motion</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> x</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> y</parameter>);
+<link linkend="SchroMotion"><returnvalue>SchroMotion</returnvalue></link> *       <link linkend="schro-motion-new">schro_motion_new</link>                    (<parameter><link linkend="SchroParams"><type>SchroParams</type></link> *params</parameter>,
+                                                         <parameter><link linkend="SchroUpsampledFrame"><type>SchroUpsampledFrame</type></link> *ref1</parameter>,
+                                                         <parameter><link linkend="SchroUpsampledFrame"><type>SchroUpsampledFrame</type></link> *ref2</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="schro-motion-render">schro_motion_render</link>                 (<parameter><link linkend="SchroMotion"><type>SchroMotion</type></link> *motion</parameter>,
+                                                         <parameter><link linkend="SchroFrame"><type>SchroFrame</type></link> *dest</parameter>,
+                                                         <parameter><link linkend="SchroFrame"><type>SchroFrame</type></link> *addframe</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> add</parameter>,
+                                                         <parameter><link linkend="SchroFrame"><type>SchroFrame</type></link> *output_frame</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="schro-motion-render-cuda">schro_motion_render_cuda</link>            (<parameter><link linkend="SchroMotion"><type>SchroMotion</type></link> *motion</parameter>,
+                                                         <parameter><link linkend="SchroFrame"><type>SchroFrame</type></link> *dest</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="schro-motion-render-ref">schro_motion_render_ref</link>             (<parameter><link linkend="SchroMotion"><type>SchroMotion</type></link> *motion</parameter>,
+                                                         <parameter><link linkend="SchroFrame"><type>SchroFrame</type></link> *dest</parameter>,
+                                                         <parameter><link linkend="SchroFrame"><type>SchroFrame</type></link> *addframe</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> add</parameter>,
+                                                         <parameter><link linkend="SchroFrame"><type>SchroFrame</type></link> *output_frame</parameter>);
+<link linkend="int"><returnvalue>int</returnvalue></link>                 <link linkend="schro-motion-superblock-estimate-entropy">schro_motion_superblock_estimate_entropy</link>
+                                                        (<parameter><link linkend="SchroMotion"><type>SchroMotion</type></link> *motion</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> i</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> j</parameter>);
+<link linkend="int"><returnvalue>int</returnvalue></link>                 <link linkend="schro-motion-superblock-try-estimate-entropy">schro_motion_superblock_try_estimate_entropy</link>
+                                                        (<parameter><link linkend="SchroMotion"><type>SchroMotion</type></link> *motion</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> i</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> j</parameter>,
+                                                         <parameter><link linkend="SchroBlock"><type>SchroBlock</type></link> *block</parameter>);
+<link linkend="int"><returnvalue>int</returnvalue></link>                 <link linkend="schro-motion-vector-is-equal">schro_motion_vector_is_equal</link>        (<parameter><link linkend="SchroMotionVector"><type>SchroMotionVector</type></link> *mv1</parameter>,
+                                                         <parameter><link linkend="SchroMotionVector"><type>SchroMotionVector</type></link> *mv2</parameter>);
+<link linkend="SchroMotionField"><returnvalue>SchroMotionField</returnvalue></link> *  <link linkend="schro-motion-field-new">schro_motion_field_new</link>              (<parameter><link linkend="int"><type>int</type></link> x_num_blocks</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> y_num_blocks</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="schro-motion-field-free">schro_motion_field_free</link>             (<parameter><link linkend="SchroMotionField"><type>SchroMotionField</type></link> *field</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="schro-motion-field-scan">schro_motion_field_scan</link>             (<parameter><link linkend="SchroMotionField"><type>SchroMotionField</type></link> *field</parameter>,
+                                                         <parameter><link linkend="SchroParams"><type>SchroParams</type></link> *params</parameter>,
+                                                         <parameter><link linkend="SchroFrame"><type>SchroFrame</type></link> *frame</parameter>,
+                                                         <parameter><link linkend="SchroFrame"><type>SchroFrame</type></link> *ref</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> dist</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="schro-motion-field-inherit">schro_motion_field_inherit</link>          (<parameter><link linkend="SchroMotionField"><type>SchroMotionField</type></link> *field</parameter>,
+                                                         <parameter><link linkend="SchroMotionField"><type>SchroMotionField</type></link> *parent</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="schro-motion-field-copy">schro_motion_field_copy</link>             (<parameter><link linkend="SchroMotionField"><type>SchroMotionField</type></link> *field</parameter>,
+                                                         <parameter><link linkend="SchroMotionField"><type>SchroMotionField</type></link> *parent</parameter>);
+<link linkend="int"><returnvalue>int</returnvalue></link>                 <link linkend="schro-motion-verify">schro_motion_verify</link>                 (<parameter><link linkend="SchroMotion"><type>SchroMotion</type></link> *mf</parameter>);
+</synopsis>
+</refsynopsisdiv>
+
+<refsect1 id="schroedinger-schromotion.description" role="desc">
+<title role="desc.title">Description</title>
+<para>
+</para>
+</refsect1>
+<refsect1 id="schroedinger-schromotion.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="SchroMotion" role="struct">
+<title>struct SchroMotion</title>
+<indexterm zone="SchroMotion"><primary>SchroMotion</primary></indexterm>
+<programlisting>struct SchroMotion {
+  SchroUpsampledFrame *src1;
+  SchroUpsampledFrame *src2;
+  SchroMotionVector *motion_vectors;
+  SchroParams *params;
+
+  uint8_t *tmpdata;
+
+  int ref_weight_precision;
+  int ref1_weight;
+  int ref2_weight;
+  int mv_precision;
+  int xoffset;
+  int yoffset;
+  int xbsep;
+  int ybsep;
+  int xblen;
+  int yblen;
+
+  SchroFrameData block;
+  SchroFrameData alloc_block;
+  SchroFrameData obmc_weight;
+
+  SchroFrameData alloc_block_ref[2];
+  SchroFrameData block_ref[2];
+
+  int weight_x[SCHRO_LIMIT_BLOCK_SIZE];
+  int weight_y[SCHRO_LIMIT_BLOCK_SIZE];
+  int width;
+  int height;
+  int max_fast_x;
+  int max_fast_y;
+
+  schro_bool simple_weight;
+  schro_bool oneref_noscale;
+};
+</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="SCHRO-MOTION-GET-BLOCK:CAPS" role="macro">
+<title>SCHRO_MOTION_GET_BLOCK()</title>
+<indexterm zone="SCHRO-MOTION-GET-BLOCK:CAPS"><primary>SCHRO_MOTION_GET_BLOCK</primary></indexterm>
+<programlisting>#define             SCHRO_MOTION_GET_BLOCK(motion,x,y)</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="schro-motion-dc-prediction" role="function">
+<title>schro_motion_dc_prediction ()</title>
+<indexterm zone="schro-motion-dc-prediction"><primary>schro_motion_dc_prediction</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                schro_motion_dc_prediction          (<parameter><link linkend="SchroMotion"><type>SchroMotion</type></link> *motion</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> x</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> y</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> *pred</parameter>);</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="schro-motion-vector-prediction" role="function">
+<title>schro_motion_vector_prediction ()</title>
+<indexterm zone="schro-motion-vector-prediction"><primary>schro_motion_vector_prediction</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                schro_motion_vector_prediction      (<parameter><link linkend="SchroMotion"><type>SchroMotion</type></link> *motion</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> x</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> y</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> *pred_x</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> *pred_y</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> mode</parameter>);</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="schro-motion-split-prediction" role="function">
+<title>schro_motion_split_prediction ()</title>
+<indexterm zone="schro-motion-split-prediction"><primary>schro_motion_split_prediction</primary></indexterm>
+<programlisting><link linkend="int"><returnvalue>int</returnvalue></link>                 schro_motion_split_prediction       (<parameter><link linkend="SchroMotion"><type>SchroMotion</type></link> *motion</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> x</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> y</parameter>);</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="schro-motion-get-mode-prediction" role="function">
+<title>schro_motion_get_mode_prediction ()</title>
+<indexterm zone="schro-motion-get-mode-prediction"><primary>schro_motion_get_mode_prediction</primary></indexterm>
+<programlisting><link linkend="int"><returnvalue>int</returnvalue></link>                 schro_motion_get_mode_prediction    (<parameter><link linkend="SchroMotion"><type>SchroMotion</type></link> *motion</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> x</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> y</parameter>);</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="schro-motion-block-estimate-entropy" role="function">
+<title>schro_motion_block_estimate_entropy ()</title>
+<indexterm zone="schro-motion-block-estimate-entropy"><primary>schro_motion_block_estimate_entropy</primary></indexterm>
+<programlisting><link linkend="int"><returnvalue>int</returnvalue></link>                 schro_motion_block_estimate_entropy (<parameter><link linkend="SchroMotion"><type>SchroMotion</type></link> *motion</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> i</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> j</parameter>);</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="schro-motion-copy-from" role="function">
+<title>schro_motion_copy_from ()</title>
+<indexterm zone="schro-motion-copy-from"><primary>schro_motion_copy_from</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                schro_motion_copy_from              (<parameter><link linkend="SchroMotion"><type>SchroMotion</type></link> *motion</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> i</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> j</parameter>,
+                                                         <parameter><link linkend="SchroBlock"><type>SchroBlock</type></link> *block</parameter>);</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="schro-motion-copy-to" role="function">
+<title>schro_motion_copy_to ()</title>
+<indexterm zone="schro-motion-copy-to"><primary>schro_motion_copy_to</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                schro_motion_copy_to                (<parameter><link linkend="SchroMotion"><type>SchroMotion</type></link> *motion</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> i</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> j</parameter>,
+                                                         <parameter><link linkend="SchroBlock"><type>SchroBlock</type></link> *block</parameter>);</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="schro-motion-estimate-entropy" role="function">
+<title>schro_motion_estimate_entropy ()</title>
+<indexterm zone="schro-motion-estimate-entropy"><primary>schro_motion_estimate_entropy</primary></indexterm>
+<programlisting><link linkend="int"><returnvalue>int</returnvalue></link>                 schro_motion_estimate_entropy       (<parameter><link linkend="SchroMotion"><type>SchroMotion</type></link> *motion</parameter>);</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="schro-motion-field-lshift" role="function">
+<title>schro_motion_field_lshift ()</title>
+<indexterm zone="schro-motion-field-lshift"><primary>schro_motion_field_lshift</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                schro_motion_field_lshift           (<parameter><link linkend="SchroMotionField"><type>SchroMotionField</type></link> *mf</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> n</parameter>);</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="schro-motion-free" role="function">
+<title>schro_motion_free ()</title>
+<indexterm zone="schro-motion-free"><primary>schro_motion_free</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                schro_motion_free                   (<parameter><link linkend="SchroMotion"><type>SchroMotion</type></link> *motion</parameter>);</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="schro-motion-get-global-prediction" role="function">
+<title>schro_motion_get_global_prediction ()</title>
+<indexterm zone="schro-motion-get-global-prediction"><primary>schro_motion_get_global_prediction</primary></indexterm>
+<programlisting><link linkend="int"><returnvalue>int</returnvalue></link>                 schro_motion_get_global_prediction  (<parameter><link linkend="SchroMotion"><type>SchroMotion</type></link> *motion</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> x</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> y</parameter>);</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="schro-motion-new" role="function">
+<title>schro_motion_new ()</title>
+<indexterm zone="schro-motion-new"><primary>schro_motion_new</primary></indexterm>
+<programlisting><link linkend="SchroMotion"><returnvalue>SchroMotion</returnvalue></link> *       schro_motion_new                    (<parameter><link linkend="SchroParams"><type>SchroParams</type></link> *params</parameter>,
+                                                         <parameter><link linkend="SchroUpsampledFrame"><type>SchroUpsampledFrame</type></link> *ref1</parameter>,
+                                                         <parameter><link linkend="SchroUpsampledFrame"><type>SchroUpsampledFrame</type></link> *ref2</parameter>);</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="schro-motion-render" role="function">
+<title>schro_motion_render ()</title>
+<indexterm zone="schro-motion-render"><primary>schro_motion_render</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                schro_motion_render                 (<parameter><link linkend="SchroMotion"><type>SchroMotion</type></link> *motion</parameter>,
+                                                         <parameter><link linkend="SchroFrame"><type>SchroFrame</type></link> *dest</parameter>,
+                                                         <parameter><link linkend="SchroFrame"><type>SchroFrame</type></link> *addframe</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> add</parameter>,
+                                                         <parameter><link linkend="SchroFrame"><type>SchroFrame</type></link> *output_frame</parameter>);</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="schro-motion-render-cuda" role="function">
+<title>schro_motion_render_cuda ()</title>
+<indexterm zone="schro-motion-render-cuda"><primary>schro_motion_render_cuda</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                schro_motion_render_cuda            (<parameter><link linkend="SchroMotion"><type>SchroMotion</type></link> *motion</parameter>,
+                                                         <parameter><link linkend="SchroFrame"><type>SchroFrame</type></link> *dest</parameter>);</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="schro-motion-render-ref" role="function">
+<title>schro_motion_render_ref ()</title>
+<indexterm zone="schro-motion-render-ref"><primary>schro_motion_render_ref</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                schro_motion_render_ref             (<parameter><link linkend="SchroMotion"><type>SchroMotion</type></link> *motion</parameter>,
+                                                         <parameter><link linkend="SchroFrame"><type>SchroFrame</type></link> *dest</parameter>,
+                                                         <parameter><link linkend="SchroFrame"><type>SchroFrame</type></link> *addframe</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> add</parameter>,
+                                                         <parameter><link linkend="SchroFrame"><type>SchroFrame</type></link> *output_frame</parameter>);</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="schro-motion-superblock-estimate-entropy" role="function">
+<title>schro_motion_superblock_estimate_entropy ()</title>
+<indexterm zone="schro-motion-superblock-estimate-entropy"><primary>schro_motion_superblock_estimate_entropy</primary></indexterm>
+<programlisting><link linkend="int"><returnvalue>int</returnvalue></link>                 schro_motion_superblock_estimate_entropy
+                                                        (<parameter><link linkend="SchroMotion"><type>SchroMotion</type></link> *motion</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> i</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> j</parameter>);</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="schro-motion-superblock-try-estimate-entropy" role="function">
+<title>schro_motion_superblock_try_estimate_entropy ()</title>
+<indexterm zone="schro-motion-superblock-try-estimate-entropy"><primary>schro_motion_superblock_try_estimate_entropy</primary></indexterm>
+<programlisting><link linkend="int"><returnvalue>int</returnvalue></link>                 schro_motion_superblock_try_estimate_entropy
+                                                        (<parameter><link linkend="SchroMotion"><type>SchroMotion</type></link> *motion</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> i</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> j</parameter>,
+                                                         <parameter><link linkend="SchroBlock"><type>SchroBlock</type></link> *block</parameter>);</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="schro-motion-vector-is-equal" role="function">
+<title>schro_motion_vector_is_equal ()</title>
+<indexterm zone="schro-motion-vector-is-equal"><primary>schro_motion_vector_is_equal</primary></indexterm>
+<programlisting><link linkend="int"><returnvalue>int</returnvalue></link>                 schro_motion_vector_is_equal        (<parameter><link linkend="SchroMotionVector"><type>SchroMotionVector</type></link> *mv1</parameter>,
+                                                         <parameter><link linkend="SchroMotionVector"><type>SchroMotionVector</type></link> *mv2</parameter>);</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="schro-motion-field-new" role="function">
+<title>schro_motion_field_new ()</title>
+<indexterm zone="schro-motion-field-new"><primary>schro_motion_field_new</primary></indexterm>
+<programlisting><link linkend="SchroMotionField"><returnvalue>SchroMotionField</returnvalue></link> *  schro_motion_field_new              (<parameter><link linkend="int"><type>int</type></link> x_num_blocks</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> y_num_blocks</parameter>);</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="schro-motion-field-free" role="function">
+<title>schro_motion_field_free ()</title>
+<indexterm zone="schro-motion-field-free"><primary>schro_motion_field_free</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                schro_motion_field_free             (<parameter><link linkend="SchroMotionField"><type>SchroMotionField</type></link> *field</parameter>);</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="schro-motion-field-scan" role="function">
+<title>schro_motion_field_scan ()</title>
+<indexterm zone="schro-motion-field-scan"><primary>schro_motion_field_scan</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                schro_motion_field_scan             (<parameter><link linkend="SchroMotionField"><type>SchroMotionField</type></link> *field</parameter>,
+                                                         <parameter><link linkend="SchroParams"><type>SchroParams</type></link> *params</parameter>,
+                                                         <parameter><link linkend="SchroFrame"><type>SchroFrame</type></link> *frame</parameter>,
+                                                         <parameter><link linkend="SchroFrame"><type>SchroFrame</type></link> *ref</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> dist</parameter>);</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="schro-motion-field-inherit" role="function">
+<title>schro_motion_field_inherit ()</title>
+<indexterm zone="schro-motion-field-inherit"><primary>schro_motion_field_inherit</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                schro_motion_field_inherit          (<parameter><link linkend="SchroMotionField"><type>SchroMotionField</type></link> *field</parameter>,
+                                                         <parameter><link linkend="SchroMotionField"><type>SchroMotionField</type></link> *parent</parameter>);</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="schro-motion-field-copy" role="function">
+<title>schro_motion_field_copy ()</title>
+<indexterm zone="schro-motion-field-copy"><primary>schro_motion_field_copy</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                schro_motion_field_copy             (<parameter><link linkend="SchroMotionField"><type>SchroMotionField</type></link> *field</parameter>,
+                                                         <parameter><link linkend="SchroMotionField"><type>SchroMotionField</type></link> *parent</parameter>);</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="schro-motion-verify" role="function">
+<title>schro_motion_verify ()</title>
+<indexterm zone="schro-motion-verify"><primary>schro_motion_verify</primary></indexterm>
+<programlisting><link linkend="int"><returnvalue>int</returnvalue></link>                 schro_motion_verify                 (<parameter><link linkend="SchroMotion"><type>SchroMotion</type></link> *mf</parameter>);</programlisting>
+<para>
+</para></refsect2>
+
+</refsect1>
+
+</refentry>

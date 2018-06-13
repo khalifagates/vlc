@@ -1,0 +1,91 @@
+/* Copyright (C) 2008 Vincent Penquerc'h.
+   This file is part of the Tiger rendering library.
+   Written by Vincent Penquerc'h.
+
+   This library is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+   License as published by the Free Software Foundation; either
+   version 2.1 of the License, or (at your option) any later version.
+  
+   This library is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.	 See the GNU
+   Lesser General Public License for more details.
+  
+   You should have received a copy of the GNU Lesser General Public
+   License along with this library; if not, write to the
+   Free Software Foundation, Inc., 59 Temple Place - Suite 330,
+   Boston, MA 02111-1307, USA. */
+
+
+/**
+
+\page Performance
+
+Performance is an important concern when overlaying a Kate stream
+on top of a video. This section highlights some of the most time
+consuming operations that Tiger performs.
+
+Before all, Tiger is a renderer for Kate streams, so the performance
+of rendering is directly tied to the input data. While Tiger offers
+a variable rendering quality level, changing it will usually have
+less effect than changing the Kate stream to make lighter use of
+slow features.
+
+In addition to the quality level, the Tiger API also offers a way to
+know if rendering the current state would yield a different image
+from the previous one. If so, rendering may be unnecessary. It all
+depends on whether the last render was overwritten (eg, if a new
+video frame was displayed, which the Tiger renderer has no way to
+know).
+
+Note also that rendering is affected by whether or not a particular
+operation is done in hardware or software. Hardware is usually so
+much faster than software than a very slow operation in software
+might well become faster than most others if done in hardware.
+Therefore, the following is only indicative, as measured roughly
+on a particular setup.
+
+Tiger uses caching to speed up rendering. Static text can be drawn
+once to a cache, and then reused for the lifetime of the event it
+appear in. Depending on the complexity of the text, the savings
+can range from insignificant to considerable. Memory usage should
+also be considered, as caching is currently naive and uses a lot
+of memory. Caching may be disabled if memory is scarce.
+
+Most motions will prevent caching. While some some motions such as
+draw motions will not cause text not to be cached, others (eg, text
+position) will prevent caching.
+
+The slowest operation of all is alpha blending. While a transparent
+background for all text may look nice, it's very slow to draw. Also,
+while static text with alpha can be cached, rendering the cache
+will also need alpha blending, so will be slow too.
+
+Font outlines can be slow to render as well, since they are drawn
+by displacing the text slighly and drawing its shape several times.
+
+Text/image size has a direct impact on performance. If possible,
+select smaller font sizes.
+
+The number of different events visible at the same time also
+effects performance. Consider delaying events to lessen the maximum
+number of events onscreen at once.
+
+Inline markup should be kept to a minimum. Font changes are
+expensive.
+
+Text path is expensive. Not only can text on a path not be cached,
+but the computations needed to keep text following the path are
+fairly complex.
+
+Setting a region clipping can improve performance, if text or images
+would otherwise overlap the outside of the region.
+
+The pixel format of the destination buffer is also important. Tiger
+can draw to ARGB or ABGR buffers, in host endianness. It is typically
+much faster to ask Tiger to draw on the correct format than to perform
+a RGB swapping step afterwards.
+
+*/
+

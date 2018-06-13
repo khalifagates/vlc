@@ -1,0 +1,105 @@
+<!-- ##### SECTION Title ##### -->
+orccompiler
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### ENUM OrcCompileResult ##### -->
+<para>
+
+</para>
+
+@ORC_COMPILE_RESULT_OK: 
+@ORC_COMPILE_RESULT_UNKNOWN_COMPILE: 
+@ORC_COMPILE_RESULT_MISSING_RULE: 
+@ORC_COMPILE_RESULT_UNKNOWN_PARSE: 
+@ORC_COMPILE_RESULT_PARSE: 
+@ORC_COMPILE_RESULT_VARIABLE: 
+
+<!-- ##### STRUCT OrcCompiler ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### STRUCT OrcConstant ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### MACRO ORC_COMPILER_ERROR ##### -->
+<para>
+
+</para>
+
+@compiler: 
+@...: 
+
+
+<!-- ##### MACRO ORC_COMPILE_RESULT_IS_FATAL ##### -->
+<para>
+
+</para>
+
+@x: 
+
+
+<!-- ##### MACRO ORC_COMPILE_RESULT_IS_SUCCESSFUL ##### -->
+<para>
+
+</para>
+
+@x: 
+
+
+<!-- ##### MACRO ORC_ASM_CODE ##### -->
+<para>
+
+</para>
+
+@compiler: 
+@...: 
+
+
+<!-- ##### MACRO ORC_ENABLE_ASM_CODE ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### FUNCTION orc_compiler_append_code ##### -->
+<para>
+
+</para>
+
+@p: 
+@fmt: 
+
+
+<!-- ##### FUNCTION orc_compiler_label_new ##### -->
+<para>
+
+</para>
+
+@compiler: 
+@Returns: 
+
+

@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" 
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd">
+<refentry id="schroedinger-schrowavelet">
+<refmeta>
+<refentrytitle role="top_of_page" id="schroedinger-schrowavelet.top_of_page">schrowavelet</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>
+  SCHROEDINGER Library
+</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>schrowavelet</refname>
+<refpurpose></refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="schroedinger-schrowavelet.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+
+<synopsis>#define             <link linkend="SCHRO-N-WAVELETS:CAPS">SCHRO_N_WAVELETS</link>
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="schro-wavelet-transform-2d">schro_wavelet_transform_2d</link>          (<parameter><link linkend="SchroFrameData"><type>SchroFrameData</type></link> *fd</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> type</parameter>,
+                                                         <parameter><link linkend="int16-t"><type>int16_t</type></link> *tmp</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="schro-wavelet-inverse-transform-2d">schro_wavelet_inverse_transform_2d</link>  (<parameter><link linkend="SchroFrameData"><type>SchroFrameData</type></link> *fd_dest</parameter>,
+                                                         <parameter><link linkend="SchroFrameData"><type>SchroFrameData</type></link> *fd_src</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> type</parameter>,
+                                                         <parameter><link linkend="int16-t"><type>int16_t</type></link> *tmp</parameter>);
+</synopsis>
+</refsynopsisdiv>
+
+<refsect1 id="schroedinger-schrowavelet.description" role="desc">
+<title role="desc.title">Description</title>
+<para>
+</para>
+</refsect1>
+<refsect1 id="schroedinger-schrowavelet.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="SCHRO-N-WAVELETS:CAPS" role="macro">
+<title>SCHRO_N_WAVELETS</title>
+<indexterm zone="SCHRO-N-WAVELETS:CAPS"><primary>SCHRO_N_WAVELETS</primary></indexterm>
+<programlisting>#define SCHRO_N_WAVELETS 7
+</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="schro-wavelet-transform-2d" role="function">
+<title>schro_wavelet_transform_2d ()</title>
+<indexterm zone="schro-wavelet-transform-2d"><primary>schro_wavelet_transform_2d</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                schro_wavelet_transform_2d          (<parameter><link linkend="SchroFrameData"><type>SchroFrameData</type></link> *fd</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> type</parameter>,
+                                                         <parameter><link linkend="int16-t"><type>int16_t</type></link> *tmp</parameter>);</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="schro-wavelet-inverse-transform-2d" role="function">
+<title>schro_wavelet_inverse_transform_2d ()</title>
+<indexterm zone="schro-wavelet-inverse-transform-2d"><primary>schro_wavelet_inverse_transform_2d</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                schro_wavelet_inverse_transform_2d  (<parameter><link linkend="SchroFrameData"><type>SchroFrameData</type></link> *fd_dest</parameter>,
+                                                         <parameter><link linkend="SchroFrameData"><type>SchroFrameData</type></link> *fd_src</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> type</parameter>,
+                                                         <parameter><link linkend="int16-t"><type>int16_t</type></link> *tmp</parameter>);</programlisting>
+<para>
+</para></refsect2>
+
+</refsect1>
+
+</refentry>

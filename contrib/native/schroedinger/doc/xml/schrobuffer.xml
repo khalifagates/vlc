@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" 
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd">
+<refentry id="schroedinger-schrobuffer">
+<refmeta>
+<refentrytitle role="top_of_page" id="schroedinger-schrobuffer.top_of_page">schrobuffer</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>
+  SCHROEDINGER Library
+</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>schrobuffer</refname>
+<refpurpose></refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="schroedinger-schrobuffer.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+
+<synopsis>struct              <link linkend="SchroBuffer">SchroBuffer</link>;
+<link linkend="SchroBuffer"><returnvalue>SchroBuffer</returnvalue></link> *       <link linkend="schro-buffer-new">schro_buffer_new</link>                    (<parameter><type>void</type></parameter>);
+<link linkend="SchroBuffer"><returnvalue>SchroBuffer</returnvalue></link> *       <link linkend="schro-buffer-new-and-alloc">schro_buffer_new_and_alloc</link>          (<parameter><link linkend="int"><type>int</type></link> size</parameter>);
+<link linkend="SchroBuffer"><returnvalue>SchroBuffer</returnvalue></link> *       <link linkend="schro-buffer-new-with-data">schro_buffer_new_with_data</link>          (<parameter><link linkend="void"><type>void</type></link> *data</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> size</parameter>);
+<link linkend="SchroBuffer"><returnvalue>SchroBuffer</returnvalue></link> *       <link linkend="schro-buffer-new-subbuffer">schro_buffer_new_subbuffer</link>          (<parameter><link linkend="SchroBuffer"><type>SchroBuffer</type></link> *buffer</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> offset</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> length</parameter>);
+<link linkend="SchroBuffer"><returnvalue>SchroBuffer</returnvalue></link> *       <link linkend="schro-buffer-ref">schro_buffer_ref</link>                    (<parameter><link linkend="SchroBuffer"><type>SchroBuffer</type></link> *buffer</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="schro-buffer-unref">schro_buffer_unref</link>                  (<parameter><link linkend="SchroBuffer"><type>SchroBuffer</type></link> *buffer</parameter>);
+<link linkend="SchroBuffer"><returnvalue>SchroBuffer</returnvalue></link> *       <link linkend="schro-buffer-dup">schro_buffer_dup</link>                    (<parameter><link linkend="SchroBuffer"><type>SchroBuffer</type></link> *buffer</parameter>);
+</synopsis>
+</refsynopsisdiv>
+
+<refsect1 id="schroedinger-schrobuffer.description" role="desc">
+<title role="desc.title">Description</title>
+<para>
+</para>
+</refsect1>
+<refsect1 id="schroedinger-schrobuffer.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="SchroBuffer" role="struct">
+<title>struct SchroBuffer</title>
+<indexterm zone="SchroBuffer"><primary>SchroBuffer</primary></indexterm>
+<programlisting>struct SchroBuffer {
+};
+</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="schro-buffer-new" role="function">
+<title>schro_buffer_new ()</title>
+<indexterm zone="schro-buffer-new"><primary>schro_buffer_new</primary></indexterm>
+<programlisting><link linkend="SchroBuffer"><returnvalue>SchroBuffer</returnvalue></link> *       schro_buffer_new                    (<parameter><type>void</type></parameter>);</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="schro-buffer-new-and-alloc" role="function">
+<title>schro_buffer_new_and_alloc ()</title>
+<indexterm zone="schro-buffer-new-and-alloc"><primary>schro_buffer_new_and_alloc</primary></indexterm>
+<programlisting><link linkend="SchroBuffer"><returnvalue>SchroBuffer</returnvalue></link> *       schro_buffer_new_and_alloc          (<parameter><link linkend="int"><type>int</type></link> size</parameter>);</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="schro-buffer-new-with-data" role="function">
+<title>schro_buffer_new_with_data ()</title>
+<indexterm zone="schro-buffer-new-with-data"><primary>schro_buffer_new_with_data</primary></indexterm>
+<programlisting><link linkend="SchroBuffer"><returnvalue>SchroBuffer</returnvalue></link> *       schro_buffer_new_with_data          (<parameter><link linkend="void"><type>void</type></link> *data</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> size</parameter>);</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="schro-buffer-new-subbuffer" role="function">
+<title>schro_buffer_new_subbuffer ()</title>
+<indexterm zone="schro-buffer-new-subbuffer"><primary>schro_buffer_new_subbuffer</primary></indexterm>
+<programlisting><link linkend="SchroBuffer"><returnvalue>SchroBuffer</returnvalue></link> *       schro_buffer_new_subbuffer          (<parameter><link linkend="SchroBuffer"><type>SchroBuffer</type></link> *buffer</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> offset</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> length</parameter>);</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="schro-buffer-ref" role="function">
+<title>schro_buffer_ref ()</title>
+<indexterm zone="schro-buffer-ref"><primary>schro_buffer_ref</primary></indexterm>
+<programlisting><link linkend="SchroBuffer"><returnvalue>SchroBuffer</returnvalue></link> *       schro_buffer_ref                    (<parameter><link linkend="SchroBuffer"><type>SchroBuffer</type></link> *buffer</parameter>);</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="schro-buffer-unref" role="function">
+<title>schro_buffer_unref ()</title>
+<indexterm zone="schro-buffer-unref"><primary>schro_buffer_unref</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                schro_buffer_unref                  (<parameter><link linkend="SchroBuffer"><type>SchroBuffer</type></link> *buffer</parameter>);</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="schro-buffer-dup" role="function">
+<title>schro_buffer_dup ()</title>
+<indexterm zone="schro-buffer-dup"><primary>schro_buffer_dup</primary></indexterm>
+<programlisting><link linkend="SchroBuffer"><returnvalue>SchroBuffer</returnvalue></link> *       schro_buffer_dup                    (<parameter><link linkend="SchroBuffer"><type>SchroBuffer</type></link> *buffer</parameter>);</programlisting>
+<para>
+</para></refsect2>
+
+</refsect1>
+
+</refentry>

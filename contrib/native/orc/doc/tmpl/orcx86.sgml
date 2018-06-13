@@ -1,0 +1,502 @@
+<!-- ##### SECTION Title ##### -->
+orcx86
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### MACRO orc_x86_emit_add_imm_memoffset ##### -->
+<para>
+
+</para>
+
+@p: 
+@size: 
+@value: 
+@offset: 
+@reg: 
+
+
+<!-- ##### FUNCTION orc_x86_emit_add_imm_reg ##### -->
+<para>
+
+</para>
+
+@compiler: 
+@size: 
+@value: 
+@reg: 
+@record: 
+
+
+<!-- ##### MACRO orc_x86_emit_add_reg_memoffset ##### -->
+<para>
+
+</para>
+
+@p: 
+@size: 
+@src: 
+@offset: 
+@dest: 
+
+
+<!-- ##### MACRO orc_x86_emit_align ##### -->
+<para>
+
+</para>
+
+@p: 
+@align_shift: 
+
+
+<!-- ##### MACRO orc_x86_emit_and_imm_memoffset ##### -->
+<para>
+
+</para>
+
+@p: 
+@size: 
+@value: 
+@offset: 
+@reg: 
+
+
+<!-- ##### MACRO orc_x86_emit_and_imm_reg ##### -->
+<para>
+
+</para>
+
+@p: 
+@size: 
+@value: 
+@reg: 
+
+
+<!-- ##### FUNCTION orc_x86_emit_cmp_imm_memoffset ##### -->
+<para>
+
+</para>
+
+@compiler: 
+@size: 
+@value: 
+@offset: 
+@reg: 
+
+
+<!-- ##### MACRO orc_x86_emit_cmp_reg_memoffset ##### -->
+<para>
+
+</para>
+
+@p: 
+@size: 
+@src: 
+@offset: 
+@dest: 
+
+
+<!-- ##### FUNCTION orc_x86_emit_dec_memoffset ##### -->
+<para>
+
+</para>
+
+@compiler: 
+@size: 
+@offset: 
+@reg: 
+
+
+<!-- ##### MACRO orc_x86_emit_emms ##### -->
+<para>
+
+</para>
+
+@p: 
+
+
+<!-- ##### FUNCTION orc_x86_emit_epilogue ##### -->
+<para>
+
+</para>
+
+@compiler: 
+
+
+<!-- ##### MACRO orc_x86_emit_je ##### -->
+<para>
+
+</para>
+
+@p: 
+@label: 
+
+
+<!-- ##### MACRO orc_x86_emit_jle ##### -->
+<para>
+
+</para>
+
+@p: 
+@label: 
+
+
+<!-- ##### MACRO orc_x86_emit_jmp ##### -->
+<para>
+
+</para>
+
+@p: 
+@label: 
+
+
+<!-- ##### MACRO orc_x86_emit_jne ##### -->
+<para>
+
+</para>
+
+@p: 
+@label: 
+
+
+<!-- ##### MACRO orc_x86_emit_label ##### -->
+<para>
+
+</para>
+
+@p: 
+@label: 
+
+
+<!-- ##### FUNCTION orc_x86_emit_modrm_memoffset ##### -->
+<para>
+
+</para>
+
+@compiler: 
+@offset: 
+@reg1: 
+@reg2: 
+
+
+<!-- ##### FUNCTION orc_x86_emit_modrm_reg ##### -->
+<para>
+
+</para>
+
+@compiler: 
+@reg1: 
+@reg2: 
+
+
+<!-- ##### MACRO orc_x86_emit_mov_imm_reg ##### -->
+<para>
+
+</para>
+
+@p: 
+@size: 
+@value: 
+@reg: 
+
+
+<!-- ##### FUNCTION orc_x86_emit_mov_memoffset_mmx ##### -->
+<para>
+
+</para>
+
+@compiler: 
+@size: 
+@offset: 
+@reg1: 
+@reg2: 
+@is_aligned: 
+
+
+<!-- ##### FUNCTION orc_x86_emit_mov_memoffset_reg ##### -->
+<para>
+
+</para>
+
+@compiler: 
+@size: 
+@offset: 
+@reg1: 
+@reg2: 
+
+
+<!-- ##### FUNCTION orc_x86_emit_mov_memoffset_sse ##### -->
+<para>
+
+</para>
+
+@compiler: 
+@size: 
+@offset: 
+@reg1: 
+@reg2: 
+@is_aligned: 
+
+
+<!-- ##### FUNCTION orc_x86_emit_mov_mmx_memoffset ##### -->
+<para>
+
+</para>
+
+@compiler: 
+@size: 
+@reg1: 
+@offset: 
+@reg2: 
+@aligned: 
+@uncached: 
+
+
+<!-- ##### FUNCTION orc_x86_emit_mov_mmx_reg ##### -->
+<para>
+
+</para>
+
+@compiler: 
+@reg1: 
+@reg2: 
+
+
+<!-- ##### FUNCTION orc_x86_emit_mov_mmx_reg_reg ##### -->
+<para>
+
+</para>
+
+@compiler: 
+@reg1: 
+@reg2: 
+
+
+<!-- ##### FUNCTION orc_x86_emit_mov_reg_memoffset ##### -->
+<para>
+
+</para>
+
+@compiler: 
+@size: 
+@reg1: 
+@offset: 
+@reg2: 
+
+
+<!-- ##### FUNCTION orc_x86_emit_mov_reg_mmx ##### -->
+<para>
+
+</para>
+
+@compiler: 
+@reg1: 
+@reg2: 
+
+
+<!-- ##### MACRO orc_x86_emit_mov_reg_reg ##### -->
+<para>
+
+</para>
+
+@p: 
+@size: 
+@src: 
+@dest: 
+
+
+<!-- ##### FUNCTION orc_x86_emit_mov_sse_memoffset ##### -->
+<para>
+
+</para>
+
+@compiler: 
+@size: 
+@reg1: 
+@offset: 
+@reg2: 
+@aligned: 
+@uncached: 
+
+
+<!-- ##### FUNCTION orc_x86_emit_pop ##### -->
+<para>
+
+</para>
+
+@compiler: 
+@size: 
+@reg: 
+
+
+<!-- ##### FUNCTION orc_x86_emit_prologue ##### -->
+<para>
+
+</para>
+
+@compiler: 
+
+
+<!-- ##### FUNCTION orc_x86_emit_push ##### -->
+<para>
+
+</para>
+
+@compiler: 
+@size: 
+@reg: 
+
+
+<!-- ##### MACRO orc_x86_emit_ret ##### -->
+<para>
+
+</para>
+
+@p: 
+
+
+<!-- ##### FUNCTION orc_x86_emit_rex ##### -->
+<para>
+
+</para>
+
+@compiler: 
+@size: 
+@reg1: 
+@reg2: 
+@reg3: 
+
+
+<!-- ##### MACRO orc_x86_emit_sar_imm_reg ##### -->
+<para>
+
+</para>
+
+@p: 
+@size: 
+@value: 
+@reg: 
+
+
+<!-- ##### MACRO orc_x86_emit_sub_memoffset_reg ##### -->
+<para>
+
+</para>
+
+@p: 
+@size: 
+@offset: 
+@src: 
+@dest: 
+
+
+<!-- ##### MACRO orc_x86_emit_sub_reg_reg ##### -->
+<para>
+
+</para>
+
+@p: 
+@size: 
+@src: 
+@dest: 
+
+
+<!-- ##### MACRO orc_x86_emit_test_reg_reg ##### -->
+<para>
+
+</para>
+
+@p: 
+@size: 
+@src: 
+@dest: 
+
+
+<!-- ##### FUNCTION orc_x86_get_regname ##### -->
+<para>
+
+</para>
+
+@i: 
+@Returns: 
+
+
+<!-- ##### FUNCTION orc_x86_get_regname_16 ##### -->
+<para>
+
+</para>
+
+@i: 
+@Returns: 
+
+
+<!-- ##### FUNCTION orc_x86_get_regname_64 ##### -->
+<para>
+
+</para>
+
+@i: 
+@Returns: 
+
+
+<!-- ##### FUNCTION orc_x86_get_regname_mmx ##### -->
+<para>
+
+</para>
+
+@i: 
+@Returns: 
+
+
+<!-- ##### FUNCTION orc_x86_get_regname_ptr ##### -->
+<para>
+
+</para>
+
+@compiler: 
+@i: 
+@Returns: 
+
+
+<!-- ##### FUNCTION orc_x86_get_regname_sse ##### -->
+<para>
+
+</para>
+
+@i: 
+@Returns: 
+
+
+<!-- ##### FUNCTION orc_x86_get_regnum ##### -->
+<para>
+
+</para>
+
+@i: 
+@Returns: 
+
+
+<!-- ##### FUNCTION orc_x86_do_fixups ##### -->
+<para>
+
+</para>
+
+@compiler: 
+
+

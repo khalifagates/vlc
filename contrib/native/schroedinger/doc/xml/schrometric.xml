@@ -1,0 +1,221 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" 
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd">
+<refentry id="schroedinger-schrometric">
+<refmeta>
+<refentrytitle role="top_of_page" id="schroedinger-schrometric.top_of_page">schrometric</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>
+  SCHROEDINGER Library
+</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>schrometric</refname>
+<refpurpose></refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="schroedinger-schrometric.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+
+<synopsis>struct              <link linkend="SchroMetricScan">SchroMetricScan</link>;
+#define             <link linkend="SCHRO-METRIC-INVALID:CAPS">SCHRO_METRIC_INVALID</link>
+<link linkend="int"><returnvalue>int</returnvalue></link>                 <link linkend="schro-metric-absdiff-u8">schro_metric_absdiff_u8</link>             (<parameter><link linkend="uint8-t"><type>uint8_t</type></link> *a</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> a_stride</parameter>,
+                                                         <parameter><link linkend="uint8-t"><type>uint8_t</type></link> *b</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> b_stride</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> width</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> height</parameter>);
+<link linkend="int"><returnvalue>int</returnvalue></link>                 <link linkend="schro-metric-haar">schro_metric_haar</link>                   (<parameter><link linkend="uint8-t"><type>uint8_t</type></link> *src1</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> stride1</parameter>,
+                                                         <parameter><link linkend="uint8-t"><type>uint8_t</type></link> *src2</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> stride2</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> width</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> height</parameter>);
+<link linkend="int"><returnvalue>int</returnvalue></link>                 <link linkend="schro-metric-haar-const">schro_metric_haar_const</link>             (<parameter><link linkend="uint8-t"><type>uint8_t</type></link> *data</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> stride</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> dc_value</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> width</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> height</parameter>);
+<link linkend="int"><returnvalue>int</returnvalue></link>                 <link linkend="schro-metric-abssum-s16">schro_metric_abssum_s16</link>             (<parameter><link linkend="int16-t"><type>int16_t</type></link> *data</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> stride</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> width</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> height</parameter>);
+<link linkend="int"><returnvalue>int</returnvalue></link>                 <link linkend="schro-metric-sum-u8">schro_metric_sum_u8</link>                 (<parameter><link linkend="uint8-t"><type>uint8_t</type></link> *data</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> stride</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> width</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> height</parameter>);
+<link linkend="int"><returnvalue>int</returnvalue></link>                 <link linkend="schro-metric-get">schro_metric_get</link>                    (<parameter><link linkend="SchroFrameData"><type>SchroFrameData</type></link> *src1</parameter>,
+                                                         <parameter><link linkend="SchroFrameData"><type>SchroFrameData</type></link> *src2</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> width</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> height</parameter>);
+<link linkend="int"><returnvalue>int</returnvalue></link>                 <link linkend="schro-metric-get-biref">schro_metric_get_biref</link>              (<parameter><link linkend="SchroFrameData"><type>SchroFrameData</type></link> *fd</parameter>,
+                                                         <parameter><link linkend="SchroFrameData"><type>SchroFrameData</type></link> *src1</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> weight1</parameter>,
+                                                         <parameter><link linkend="SchroFrameData"><type>SchroFrameData</type></link> *src2</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> weight2</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> shift</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> width</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> height</parameter>);
+<link linkend="int"><returnvalue>int</returnvalue></link>                 <link linkend="schro-metric-get-dc">schro_metric_get_dc</link>                 (<parameter><link linkend="SchroFrameData"><type>SchroFrameData</type></link> *src</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> value</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> width</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> height</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="schro-metric-scan-do-scan">schro_metric_scan_do_scan</link>           (<parameter><link linkend="SchroMetricScan"><type>SchroMetricScan</type></link> *scan</parameter>);
+<link linkend="int"><returnvalue>int</returnvalue></link>                 <link linkend="schro-metric-scan-get-min">schro_metric_scan_get_min</link>           (<parameter><link linkend="SchroMetricScan"><type>SchroMetricScan</type></link> *scan</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> *dx</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> *dy</parameter>,
+                                                         <parameter><link linkend="uint32-t"><type>uint32_t</type></link> *chroma_metric</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="schro-metric-scan-setup">schro_metric_scan_setup</link>             (<parameter><link linkend="SchroMetricScan"><type>SchroMetricScan</type></link> *scan</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> dx</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> dy</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> dist</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> use_chroma</parameter>);
+</synopsis>
+</refsynopsisdiv>
+
+<refsect1 id="schroedinger-schrometric.description" role="desc">
+<title role="desc.title">Description</title>
+<para>
+</para>
+</refsect1>
+<refsect1 id="schroedinger-schrometric.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="SchroMetricScan" role="struct">
+<title>struct SchroMetricScan</title>
+<indexterm zone="SchroMetricScan"><primary>SchroMetricScan</primary></indexterm>
+<programlisting>struct SchroMetricScan {
+  SchroFrame *frame;
+  SchroFrame *ref_frame;
+  int block_width;
+  int block_height;
+  int x, y;
+  int ref_x, ref_y;
+  int scan_width;
+  int scan_height;
+  int gravity_scale;
+  int gravity_x, gravity_y;
+  int use_chroma;
+  /* output */
+  uint32_t metrics[SCHRO_LIMIT_METRIC_SCAN*SCHRO_LIMIT_METRIC_SCAN];
+  uint32_t chroma_metrics[SCHRO_LIMIT_METRIC_SCAN*SCHRO_LIMIT_METRIC_SCAN];
+};
+</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="SCHRO-METRIC-INVALID:CAPS" role="macro">
+<title>SCHRO_METRIC_INVALID</title>
+<indexterm zone="SCHRO-METRIC-INVALID:CAPS"><primary>SCHRO_METRIC_INVALID</primary></indexterm>
+<programlisting>#define SCHRO_METRIC_INVALID INT_MAX
+</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="schro-metric-absdiff-u8" role="function">
+<title>schro_metric_absdiff_u8 ()</title>
+<indexterm zone="schro-metric-absdiff-u8"><primary>schro_metric_absdiff_u8</primary></indexterm>
+<programlisting><link linkend="int"><returnvalue>int</returnvalue></link>                 schro_metric_absdiff_u8             (<parameter><link linkend="uint8-t"><type>uint8_t</type></link> *a</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> a_stride</parameter>,
+                                                         <parameter><link linkend="uint8-t"><type>uint8_t</type></link> *b</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> b_stride</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> width</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> height</parameter>);</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="schro-metric-haar" role="function">
+<title>schro_metric_haar ()</title>
+<indexterm zone="schro-metric-haar"><primary>schro_metric_haar</primary></indexterm>
+<programlisting><link linkend="int"><returnvalue>int</returnvalue></link>                 schro_metric_haar                   (<parameter><link linkend="uint8-t"><type>uint8_t</type></link> *src1</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> stride1</parameter>,
+                                                         <parameter><link linkend="uint8-t"><type>uint8_t</type></link> *src2</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> stride2</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> width</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> height</parameter>);</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="schro-metric-haar-const" role="function">
+<title>schro_metric_haar_const ()</title>
+<indexterm zone="schro-metric-haar-const"><primary>schro_metric_haar_const</primary></indexterm>
+<programlisting><link linkend="int"><returnvalue>int</returnvalue></link>                 schro_metric_haar_const             (<parameter><link linkend="uint8-t"><type>uint8_t</type></link> *data</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> stride</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> dc_value</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> width</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> height</parameter>);</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="schro-metric-abssum-s16" role="function">
+<title>schro_metric_abssum_s16 ()</title>
+<indexterm zone="schro-metric-abssum-s16"><primary>schro_metric_abssum_s16</primary></indexterm>
+<programlisting><link linkend="int"><returnvalue>int</returnvalue></link>                 schro_metric_abssum_s16             (<parameter><link linkend="int16-t"><type>int16_t</type></link> *data</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> stride</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> width</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> height</parameter>);</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="schro-metric-sum-u8" role="function">
+<title>schro_metric_sum_u8 ()</title>
+<indexterm zone="schro-metric-sum-u8"><primary>schro_metric_sum_u8</primary></indexterm>
+<programlisting><link linkend="int"><returnvalue>int</returnvalue></link>                 schro_metric_sum_u8                 (<parameter><link linkend="uint8-t"><type>uint8_t</type></link> *data</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> stride</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> width</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> height</parameter>);</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="schro-metric-get" role="function">
+<title>schro_metric_get ()</title>
+<indexterm zone="schro-metric-get"><primary>schro_metric_get</primary></indexterm>
+<programlisting><link linkend="int"><returnvalue>int</returnvalue></link>                 schro_metric_get                    (<parameter><link linkend="SchroFrameData"><type>SchroFrameData</type></link> *src1</parameter>,
+                                                         <parameter><link linkend="SchroFrameData"><type>SchroFrameData</type></link> *src2</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> width</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> height</parameter>);</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="schro-metric-get-biref" role="function">
+<title>schro_metric_get_biref ()</title>
+<indexterm zone="schro-metric-get-biref"><primary>schro_metric_get_biref</primary></indexterm>
+<programlisting><link linkend="int"><returnvalue>int</returnvalue></link>                 schro_metric_get_biref              (<parameter><link linkend="SchroFrameData"><type>SchroFrameData</type></link> *fd</parameter>,
+                                                         <parameter><link linkend="SchroFrameData"><type>SchroFrameData</type></link> *src1</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> weight1</parameter>,
+                                                         <parameter><link linkend="SchroFrameData"><type>SchroFrameData</type></link> *src2</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> weight2</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> shift</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> width</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> height</parameter>);</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="schro-metric-get-dc" role="function">
+<title>schro_metric_get_dc ()</title>
+<indexterm zone="schro-metric-get-dc"><primary>schro_metric_get_dc</primary></indexterm>
+<programlisting><link linkend="int"><returnvalue>int</returnvalue></link>                 schro_metric_get_dc                 (<parameter><link linkend="SchroFrameData"><type>SchroFrameData</type></link> *src</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> value</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> width</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> height</parameter>);</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="schro-metric-scan-do-scan" role="function">
+<title>schro_metric_scan_do_scan ()</title>
+<indexterm zone="schro-metric-scan-do-scan"><primary>schro_metric_scan_do_scan</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                schro_metric_scan_do_scan           (<parameter><link linkend="SchroMetricScan"><type>SchroMetricScan</type></link> *scan</parameter>);</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="schro-metric-scan-get-min" role="function">
+<title>schro_metric_scan_get_min ()</title>
+<indexterm zone="schro-metric-scan-get-min"><primary>schro_metric_scan_get_min</primary></indexterm>
+<programlisting><link linkend="int"><returnvalue>int</returnvalue></link>                 schro_metric_scan_get_min           (<parameter><link linkend="SchroMetricScan"><type>SchroMetricScan</type></link> *scan</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> *dx</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> *dy</parameter>,
+                                                         <parameter><link linkend="uint32-t"><type>uint32_t</type></link> *chroma_metric</parameter>);</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="schro-metric-scan-setup" role="function">
+<title>schro_metric_scan_setup ()</title>
+<indexterm zone="schro-metric-scan-setup"><primary>schro_metric_scan_setup</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                schro_metric_scan_setup             (<parameter><link linkend="SchroMetricScan"><type>SchroMetricScan</type></link> *scan</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> dx</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> dy</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> dist</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> use_chroma</parameter>);</programlisting>
+<para>
+</para></refsect2>
+
+</refsect1>
+
+</refentry>

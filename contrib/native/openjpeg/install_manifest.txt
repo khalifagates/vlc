@@ -1,0 +1,8 @@
+/home/boogie/vlc/contrib/x86_64-linux-gnu/lib/openjpeg-2.3/OpenJPEGTargets.cmake
+/home/boogie/vlc/contrib/x86_64-linux-gnu/lib/openjpeg-2.3/OpenJPEGTargets-noconfig.cmake
+/home/boogie/vlc/contrib/x86_64-linux-gnu/lib/openjpeg-2.3/OpenJPEGConfig.cmake
+/home/boogie/vlc/contrib/x86_64-linux-gnu/lib/pkgconfig/libopenjp2.pc
+/home/boogie/vlc/contrib/x86_64-linux-gnu/include/openjpeg-2.3/opj_config.h
+/home/boogie/vlc/contrib/x86_64-linux-gnu/lib/libopenjp2.a
+/home/boogie/vlc/contrib/x86_64-linux-gnu/include/openjpeg-2.3/openjpeg.h
+/home/boogie/vlc/contrib/x86_64-linux-gnu/include/openjpeg-2.3/opj_stdint.h

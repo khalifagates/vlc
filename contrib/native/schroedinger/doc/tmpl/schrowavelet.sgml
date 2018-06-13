@@ -1,0 +1,50 @@
+<!-- ##### SECTION Title ##### -->
+schrowavelet
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### MACRO SCHRO_N_WAVELETS ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### FUNCTION schro_wavelet_transform_2d ##### -->
+<para>
+
+</para>
+
+@fd: 
+@type: 
+@tmp: 
+
+
+<!-- ##### FUNCTION schro_wavelet_inverse_transform_2d ##### -->
+<para>
+
+</para>
+
+@fd_dest: 
+@fd_src: 
+@type: 
+@tmp: 
+
+

@@ -1,0 +1,6 @@
+set(CMAKE_BUILD_TYPE Release)
+set(CMAKE_SYSTEM_PROCESSOR x86_64)
+set(CMAKE_C_COMPILER gcc)
+set(CMAKE_CXX_COMPILER g++)
+set(CMAKE_FIND_ROOT_PATH /home/boogie/vlc/contrib/x86_64-linux-gnu)
+set(CMAKE_FIND_ROOT_PATH_MODE_PROGRAM NEVER)

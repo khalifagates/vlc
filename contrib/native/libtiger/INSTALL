@@ -1,0 +1,23 @@
+
+Prerequisites:
+  libkate: http://libkate.googlecode.com/
+  Pango: http://www.pango.org/
+  Cairo: http://cairographics.com/
+
+
+Build with:
+
+$ ./configure
+$ make
+# make install
+
+or:
+
+$ ./configure --prefix=$HOME
+$ make
+$ make install
+
+Uninstall with:
+
+$ make uninstall
+

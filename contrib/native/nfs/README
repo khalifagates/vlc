@@ -1,0 +1,142 @@
+LIBNFS is a client library for accessing NFS shares over a network.
+
+LIBNFS offers three different APIs, for different use :
+1, RAW : A fully async low level RPC library for NFS protocols
+This API is described in include/libnfs-raw.h
+it offers a fully async interface to raw XDR encoded blobs.
+This API provides very flexible and precise control of the RPC issued.
+
+examples/nfsclient-raw.c provides examples on how to use the raw API
+
+2, NFS ASYNC : A fully asynchronous library for high level vfs functions
+This API is described by the *_async() functions in include/libnfs.h.
+This API provides a fully async access to posix vfs like functions such as
+stat(), read(), ...
+
+examples/nfsclient-async.c provides examples on how to use this API
+
+
+3, NFS SYNC : A synchronous library for high level vfs functions
+This API is described by the *_sync() functions in include/libnfs.h.
+This API provides access to posix vfs like functions such as
+stat(), read(), ...
+
+examples/nfsclient-sync.c provides examples on how to use this API
+
+URL-FORMAT:
+===========
+Libnfs uses RFC2224 style URLs extended with libnfs specific url arguments some minor extensions.
+The basic syntax of these URLs is :
+
+nfs://<server|ipv4|ipv6>/path[?arg=val[&arg=val]*]
+
+Arguments supported by libnfs are :
+ tcp-syncnt=<int>  : Number of SYNs to send during the session establish
+                     before failing setting up the tcp connection to the
+                     server.
+ uid=<int>         : UID value to use when talking to the server.
+                     default it 65534 on Windows and getuid() on unixen.
+ gid=<int>         : GID value to use when talking to the server.
+                     default it 65534 on Windows and getgid() on unixen.
+ readahead=<int>   : Enable readahead for files and set the maximum amount
+                     of readahead to <int> bytes.
+ auto-traverse-mounts=<0|1>
+                   : Should libnfs try to traverse across nested mounts
+                     automatically or not. Default is 1 == enabled.
+ dircache=<0|1>    : Disable/enable directory caching. Enabled by default.
+ if=<interface>    : Interface name (e.g., eth1) to bind; requires `root`
+
+Auto_traverse_mounts
+====================
+Normally in NFSv3 if a server has nested exports, for example if it would
+export both /data and /data/tmp then a client would need to mount
+both these exports as well.
+The reason is because the NFSv3 protocol does not allow a client request
+to return data for an object in a different filesystem/mount.
+(legacy, but it is what it is. One reason for this restriction is to
+guarantee that inodes are uniqe across the mounted system.)
+
+This option, when enabled will make libnfs perform all these mounts
+internally for you. This means that one libnfs mount may now have files
+with duplicate inode values so if you cache files based on inode
+make sure you cache files based on BOTH st.st_ino and st.st_dev.
+
+
+ROOT vs NON-ROOT
+================
+When running as root, libnfs tries to allocate a system port for its connection
+to the NFS server. When running as non-root it will use a normal
+ephemeral port.
+Many NFS servers default to a mode where they do not allow non-system
+ports from connecting.
+These servers require you use the "insecure" export option in /etc/exports
+in order to allow libnfs clients to be able to connect.
+
+Some versions of Linux support special capabilities that can be assigned to
+programs to allow non-root users to bind to system ports.
+This is set up by running
+    sudo setcap 'cap_net_bind_service=+ep' /path/to/executable
+When libnfs is linked against an executable with this special capability
+assigned to it, libnfs may be able to use system ports even when executing
+under the privilege of a non-root user account.
+
+This is highly non-portable so IF this works on your linux system, count
+yourself lucky.
+
+
+DOCUMENTATION
+=============
+libnfs sources ship with prebuilt manpage(s) in the doc directory.
+If you change the manpage sources you need to manually regenerate the new
+manpages by running
+  cd doc
+  make doc
+
+
+PLATFORM support
+=================
+This is a truly multiplatform library.
+
+Linux:  - tested with Ubuntu 10.04 - should work with others as well
+Cygwin: - tested under 64bit win2k8.
+MacOSX: - tested with SDK 10.4 (under Snow Leopard) - should also work with later SDKs and 64Bit
+iOS:    - tested with iOS SDK 4.2 - running on iOS 4.3.x
+FreeBSD:- tested with 8.2
+Solaris
+Windows:- tested on Windows 7 64 and Windows XP 32 using Visual Studio 10 (see README.win32.txt for build instructions)
+        - tested on Windows 7 64 using MingW on Linux to cross-compile (Debian and Ubuntu tested)
+Android:- tested with NDK r10e - running on Android 4.4 (should work starting from 2.3.3)
+AROS: - Build with 'make -f aros/Makefile.AROS'
+
+
+LD_PRELOAD
+==========
+examples/ld_nfs.c contains a LD_PRELOADable module that can be used to make
+several standard utilities nfs aware.
+It is still very incomplete but can be used for basic things such as cat and cp.
+Patches to add more coverage is welcome.
+
+Compile with :
+gcc -fPIC -shared -o ld_nfs.so examples/ld_nfs.c -ldl -lnfs
+
+Then try things like
+LD_NFS_DEBUG=9 LD_PRELOAD=./ld_nfs.so cat nfs://127.0.0.1/data/tmp/foo123
+
+LD_NFS_DEBUG=9 LD_PRELOAD=./ld_nfs.so cp nfs://127.0.0.1/data/tmp/foo123 nfs://127.0.0.1/data/tmp/foo123.copy
+
+This is just a toy preload module. Don't open bugs if it does not work. Send
+patches to make it better instead.
+
+
+RELEASE TARBALLS
+================
+Release tarballs are available at
+https://sites.google.com/site/libnfstarballs/li
+
+
+
+MAILING LIST
+============
+A libnfs mailing list is available at http://groups.google.com/group/libnfs
+Announcements of new versions of libnfs will be posted to this list.
+

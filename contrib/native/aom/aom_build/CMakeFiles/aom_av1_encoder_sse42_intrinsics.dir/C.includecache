@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/boogie/vlc/contrib/native/aom/av1/encoder/x86/hash_sse42.c
+stdint.h
+-
+smmintrin.h
+-
+

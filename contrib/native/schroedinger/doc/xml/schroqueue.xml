@@ -1,0 +1,156 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" 
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd">
+<refentry id="schroedinger-schroqueue">
+<refmeta>
+<refentrytitle role="top_of_page" id="schroedinger-schroqueue.top_of_page">schroqueue</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>
+  SCHROEDINGER Library
+</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>schroqueue</refname>
+<refpurpose></refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="schroedinger-schroqueue.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+
+<synopsis>struct              <link linkend="SchroQueue">SchroQueue</link>;
+struct              <link linkend="SchroQueueElement">SchroQueueElement</link>;
+<link linkend="void"><returnvalue>void</returnvalue></link>                (<link linkend="SchroQueueFreeFunc">*SchroQueueFreeFunc</link>)               (<parameter><link linkend="void"><type>void</type></link> *data</parameter>,
+                                                         <parameter><link linkend="SchroPictureNumber"><type>SchroPictureNumber</type></link> number</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="schro-queue-add">schro_queue_add</link>                     (<parameter><link linkend="SchroQueue"><type>SchroQueue</type></link> *queue</parameter>,
+                                                         <parameter><link linkend="void"><type>void</type></link> *element</parameter>,
+                                                         <parameter><link linkend="SchroPictureNumber"><type>SchroPictureNumber</type></link> picture_number</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="schro-queue-clear">schro_queue_clear</link>                   (<parameter><link linkend="SchroQueue"><type>SchroQueue</type></link> *queue</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="schro-queue-delete">schro_queue_delete</link>                  (<parameter><link linkend="SchroQueue"><type>SchroQueue</type></link> *queue</parameter>,
+                                                         <parameter><link linkend="SchroPictureNumber"><type>SchroPictureNumber</type></link> picture_number</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link> *              <link linkend="schro-queue-find">schro_queue_find</link>                    (<parameter><link linkend="SchroQueue"><type>SchroQueue</type></link> *queue</parameter>,
+                                                         <parameter><link linkend="SchroPictureNumber"><type>SchroPictureNumber</type></link> picture_number</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="schro-queue-free">schro_queue_free</link>                    (<parameter><link linkend="SchroQueue"><type>SchroQueue</type></link> *queue</parameter>);
+<link linkend="int"><returnvalue>int</returnvalue></link>                 <link linkend="schro-queue-is-empty">schro_queue_is_empty</link>                (<parameter><link linkend="SchroQueue"><type>SchroQueue</type></link> *queue</parameter>);
+<link linkend="int"><returnvalue>int</returnvalue></link>                 <link linkend="schro-queue-is-full">schro_queue_is_full</link>                 (<parameter><link linkend="SchroQueue"><type>SchroQueue</type></link> *queue</parameter>);
+<link linkend="SchroQueue"><returnvalue>SchroQueue</returnvalue></link> *        <link linkend="schro-queue-new">schro_queue_new</link>                     (<parameter><link linkend="int"><type>int</type></link> size</parameter>,
+                                                         <parameter><link linkend="SchroQueueFreeFunc"><type>SchroQueueFreeFunc</type></link> func</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="schro-queue-pop">schro_queue_pop</link>                     (<parameter><link linkend="SchroQueue"><type>SchroQueue</type></link> *queue</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link> *              <link linkend="schro-queue-pull">schro_queue_pull</link>                    (<parameter><link linkend="SchroQueue"><type>SchroQueue</type></link> *queue</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link> *              <link linkend="schro-queue-remove">schro_queue_remove</link>                  (<parameter><link linkend="SchroQueue"><type>SchroQueue</type></link> *queue</parameter>,
+                                                         <parameter><link linkend="SchroPictureNumber"><type>SchroPictureNumber</type></link> picture_number</parameter>);
+</synopsis>
+</refsynopsisdiv>
+
+<refsect1 id="schroedinger-schroqueue.description" role="desc">
+<title role="desc.title">Description</title>
+<para>
+</para>
+</refsect1>
+<refsect1 id="schroedinger-schroqueue.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="SchroQueue" role="struct">
+<title>struct SchroQueue</title>
+<indexterm zone="SchroQueue"><primary>SchroQueue</primary></indexterm>
+<programlisting>struct SchroQueue {
+  int size;
+  int n;
+
+  SchroQueueElement *elements;
+  SchroQueueFreeFunc free;
+};
+</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="SchroQueueElement" role="struct">
+<title>struct SchroQueueElement</title>
+<indexterm zone="SchroQueueElement"><primary>SchroQueueElement</primary></indexterm>
+<programlisting>struct SchroQueueElement {
+  void *data;
+  SchroPictureNumber picture_number;
+};
+</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="SchroQueueFreeFunc" role="function">
+<title>SchroQueueFreeFunc ()</title>
+<indexterm zone="SchroQueueFreeFunc"><primary>SchroQueueFreeFunc</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                (*SchroQueueFreeFunc)               (<parameter><link linkend="void"><type>void</type></link> *data</parameter>,
+                                                         <parameter><link linkend="SchroPictureNumber"><type>SchroPictureNumber</type></link> number</parameter>);</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="schro-queue-add" role="function">
+<title>schro_queue_add ()</title>
+<indexterm zone="schro-queue-add"><primary>schro_queue_add</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                schro_queue_add                     (<parameter><link linkend="SchroQueue"><type>SchroQueue</type></link> *queue</parameter>,
+                                                         <parameter><link linkend="void"><type>void</type></link> *element</parameter>,
+                                                         <parameter><link linkend="SchroPictureNumber"><type>SchroPictureNumber</type></link> picture_number</parameter>);</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="schro-queue-clear" role="function">
+<title>schro_queue_clear ()</title>
+<indexterm zone="schro-queue-clear"><primary>schro_queue_clear</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                schro_queue_clear                   (<parameter><link linkend="SchroQueue"><type>SchroQueue</type></link> *queue</parameter>);</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="schro-queue-delete" role="function">
+<title>schro_queue_delete ()</title>
+<indexterm zone="schro-queue-delete"><primary>schro_queue_delete</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                schro_queue_delete                  (<parameter><link linkend="SchroQueue"><type>SchroQueue</type></link> *queue</parameter>,
+                                                         <parameter><link linkend="SchroPictureNumber"><type>SchroPictureNumber</type></link> picture_number</parameter>);</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="schro-queue-find" role="function">
+<title>schro_queue_find ()</title>
+<indexterm zone="schro-queue-find"><primary>schro_queue_find</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link> *              schro_queue_find                    (<parameter><link linkend="SchroQueue"><type>SchroQueue</type></link> *queue</parameter>,
+                                                         <parameter><link linkend="SchroPictureNumber"><type>SchroPictureNumber</type></link> picture_number</parameter>);</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="schro-queue-free" role="function">
+<title>schro_queue_free ()</title>
+<indexterm zone="schro-queue-free"><primary>schro_queue_free</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                schro_queue_free                    (<parameter><link linkend="SchroQueue"><type>SchroQueue</type></link> *queue</parameter>);</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="schro-queue-is-empty" role="function">
+<title>schro_queue_is_empty ()</title>
+<indexterm zone="schro-queue-is-empty"><primary>schro_queue_is_empty</primary></indexterm>
+<programlisting><link linkend="int"><returnvalue>int</returnvalue></link>                 schro_queue_is_empty                (<parameter><link linkend="SchroQueue"><type>SchroQueue</type></link> *queue</parameter>);</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="schro-queue-is-full" role="function">
+<title>schro_queue_is_full ()</title>
+<indexterm zone="schro-queue-is-full"><primary>schro_queue_is_full</primary></indexterm>
+<programlisting><link linkend="int"><returnvalue>int</returnvalue></link>                 schro_queue_is_full                 (<parameter><link linkend="SchroQueue"><type>SchroQueue</type></link> *queue</parameter>);</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="schro-queue-new" role="function">
+<title>schro_queue_new ()</title>
+<indexterm zone="schro-queue-new"><primary>schro_queue_new</primary></indexterm>
+<programlisting><link linkend="SchroQueue"><returnvalue>SchroQueue</returnvalue></link> *        schro_queue_new                     (<parameter><link linkend="int"><type>int</type></link> size</parameter>,
+                                                         <parameter><link linkend="SchroQueueFreeFunc"><type>SchroQueueFreeFunc</type></link> func</parameter>);</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="schro-queue-pop" role="function">
+<title>schro_queue_pop ()</title>
+<indexterm zone="schro-queue-pop"><primary>schro_queue_pop</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                schro_queue_pop                     (<parameter><link linkend="SchroQueue"><type>SchroQueue</type></link> *queue</parameter>);</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="schro-queue-pull" role="function">
+<title>schro_queue_pull ()</title>
+<indexterm zone="schro-queue-pull"><primary>schro_queue_pull</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link> *              schro_queue_pull                    (<parameter><link linkend="SchroQueue"><type>SchroQueue</type></link> *queue</parameter>);</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="schro-queue-remove" role="function">
+<title>schro_queue_remove ()</title>
+<indexterm zone="schro-queue-remove"><primary>schro_queue_remove</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link> *              schro_queue_remove                  (<parameter><link linkend="SchroQueue"><type>SchroQueue</type></link> *queue</parameter>,
+                                                         <parameter><link linkend="SchroPictureNumber"><type>SchroPictureNumber</type></link> picture_number</parameter>);</programlisting>
+<para>
+</para></refsect2>
+
+</refsect1>
+
+</refentry>

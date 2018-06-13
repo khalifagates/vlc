@@ -1,0 +1,2 @@
+/usr/bin/ar qc libwavformat_static.a  CMakeFiles/wavformat_static.dir/input.o CMakeFiles/wavformat_static.dir/output.o
+/usr/bin/ranlib libwavformat_static.a

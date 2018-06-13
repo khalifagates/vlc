@@ -1,0 +1,141 @@
+<!-- ##### SECTION Title ##### -->
+orcdebug
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### ENUM OrcDebugLevel ##### -->
+<para>
+
+</para>
+
+@ORC_DEBUG_NONE: 
+@ORC_DEBUG_ERROR: 
+@ORC_DEBUG_WARNING: 
+@ORC_DEBUG_INFO: 
+@ORC_DEBUG_DEBUG: 
+@ORC_DEBUG_LOG: 
+
+<!-- ##### USER_FUNCTION OrcDebugPrintFunc ##### -->
+<para>
+
+</para>
+
+@level: 
+@file: 
+@func: 
+@line: 
+@format: 
+@varargs: 
+
+
+<!-- ##### MACRO ORC_DEBUG_PRINT ##### -->
+<para>
+
+</para>
+
+@level: 
+@...: 
+
+
+<!-- ##### MACRO ORC_ERROR ##### -->
+<para>
+
+</para>
+
+@...: 
+
+
+<!-- ##### MACRO ORC_WARNING ##### -->
+<para>
+
+</para>
+
+@...: 
+
+
+<!-- ##### MACRO ORC_INFO ##### -->
+<para>
+
+</para>
+
+@...: 
+
+
+<!-- ##### MACRO ORC_DEBUG ##### -->
+<para>
+
+</para>
+
+@...: 
+
+
+<!-- ##### MACRO ORC_LOG ##### -->
+<para>
+
+</para>
+
+@...: 
+
+
+<!-- ##### MACRO ORC_FUNCTION ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### FUNCTION orc_debug_get_level ##### -->
+<para>
+
+</para>
+
+@void: 
+@Returns: 
+
+
+<!-- ##### FUNCTION orc_debug_print ##### -->
+<para>
+
+</para>
+
+@level: 
+@file: 
+@func: 
+@line: 
+@format: 
+@...: 
+
+
+<!-- ##### FUNCTION orc_debug_set_level ##### -->
+<para>
+
+</para>
+
+@level: 
+
+
+<!-- ##### FUNCTION orc_debug_set_print_function ##### -->
+<para>
+
+</para>
+
+@func: 
+
+

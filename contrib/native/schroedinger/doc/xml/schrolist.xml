@@ -1,0 +1,154 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" 
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd">
+<refentry id="schroedinger-schrolist">
+<refmeta>
+<refentrytitle role="top_of_page" id="schroedinger-schrolist.top_of_page">schrolist</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>
+  SCHROEDINGER Library
+</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>schrolist</refname>
+<refpurpose></refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="schroedinger-schrolist.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+
+<synopsis>struct              <link linkend="SchroList">SchroList</link>;
+<link linkend="void"><returnvalue>void</returnvalue></link>                (<link linkend="SchroListFreeFunc">*SchroListFreeFunc</link>)                (<parameter><link linkend="void"><type>void</type></link> *member</parameter>,
+                                                         <parameter><link linkend="void"><type>void</type></link> *priv</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="schro-list-append">schro_list_append</link>                   (<parameter><link linkend="SchroList"><type>SchroList</type></link> *list</parameter>,
+                                                         <parameter><link linkend="void"><type>void</type></link> *value</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="schro-list-delete">schro_list_delete</link>                   (<parameter><link linkend="SchroList"><type>SchroList</type></link> *list</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> i</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="schro-list-free">schro_list_free</link>                     (<parameter><link linkend="SchroList"><type>SchroList</type></link> *list</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link> *              <link linkend="schro-list-get">schro_list_get</link>                      (<parameter><link linkend="SchroList"><type>SchroList</type></link> *list</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> i</parameter>);
+<link linkend="int"><returnvalue>int</returnvalue></link>                 <link linkend="schro-list-get-size">schro_list_get_size</link>                 (<parameter><link linkend="SchroList"><type>SchroList</type></link> *list</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="schro-list-insert">schro_list_insert</link>                   (<parameter><link linkend="SchroList"><type>SchroList</type></link> *list</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> i</parameter>,
+                                                         <parameter><link linkend="void"><type>void</type></link> *value</parameter>);
+<link linkend="SchroList"><returnvalue>SchroList</returnvalue></link> *         <link linkend="schro-list-new">schro_list_new</link>                      (<parameter><type>void</type></parameter>);
+<link linkend="SchroList"><returnvalue>SchroList</returnvalue></link> *         <link linkend="schro-list-new-full">schro_list_new_full</link>                 (<parameter><link linkend="SchroListFreeFunc"><type>SchroListFreeFunc</type></link> freefunc</parameter>,
+                                                         <parameter><link linkend="void"><type>void</type></link> *priv</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="schro-list-prepend">schro_list_prepend</link>                  (<parameter><link linkend="SchroList"><type>SchroList</type></link> *list</parameter>,
+                                                         <parameter><link linkend="void"><type>void</type></link> *value</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link> *              <link linkend="schro-list-remove">schro_list_remove</link>                   (<parameter><link linkend="SchroList"><type>SchroList</type></link> *list</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> i</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link> *              <link linkend="schro-list-replace">schro_list_replace</link>                  (<parameter><link linkend="SchroList"><type>SchroList</type></link> *list</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> i</parameter>,
+                                                         <parameter><link linkend="void"><type>void</type></link> *value</parameter>);
+</synopsis>
+</refsynopsisdiv>
+
+<refsect1 id="schroedinger-schrolist.description" role="desc">
+<title role="desc.title">Description</title>
+<para>
+</para>
+</refsect1>
+<refsect1 id="schroedinger-schrolist.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="SchroList" role="struct">
+<title>struct SchroList</title>
+<indexterm zone="SchroList"><primary>SchroList</primary></indexterm>
+<programlisting>struct SchroList {
+  void **members;
+  int n;
+  int n_alloc;
+
+  SchroListFreeFunc free;
+  void *priv;
+};
+</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="SchroListFreeFunc" role="function">
+<title>SchroListFreeFunc ()</title>
+<indexterm zone="SchroListFreeFunc"><primary>SchroListFreeFunc</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                (*SchroListFreeFunc)                (<parameter><link linkend="void"><type>void</type></link> *member</parameter>,
+                                                         <parameter><link linkend="void"><type>void</type></link> *priv</parameter>);</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="schro-list-append" role="function">
+<title>schro_list_append ()</title>
+<indexterm zone="schro-list-append"><primary>schro_list_append</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                schro_list_append                   (<parameter><link linkend="SchroList"><type>SchroList</type></link> *list</parameter>,
+                                                         <parameter><link linkend="void"><type>void</type></link> *value</parameter>);</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="schro-list-delete" role="function">
+<title>schro_list_delete ()</title>
+<indexterm zone="schro-list-delete"><primary>schro_list_delete</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                schro_list_delete                   (<parameter><link linkend="SchroList"><type>SchroList</type></link> *list</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> i</parameter>);</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="schro-list-free" role="function">
+<title>schro_list_free ()</title>
+<indexterm zone="schro-list-free"><primary>schro_list_free</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                schro_list_free                     (<parameter><link linkend="SchroList"><type>SchroList</type></link> *list</parameter>);</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="schro-list-get" role="function">
+<title>schro_list_get ()</title>
+<indexterm zone="schro-list-get"><primary>schro_list_get</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link> *              schro_list_get                      (<parameter><link linkend="SchroList"><type>SchroList</type></link> *list</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> i</parameter>);</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="schro-list-get-size" role="function">
+<title>schro_list_get_size ()</title>
+<indexterm zone="schro-list-get-size"><primary>schro_list_get_size</primary></indexterm>
+<programlisting><link linkend="int"><returnvalue>int</returnvalue></link>                 schro_list_get_size                 (<parameter><link linkend="SchroList"><type>SchroList</type></link> *list</parameter>);</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="schro-list-insert" role="function">
+<title>schro_list_insert ()</title>
+<indexterm zone="schro-list-insert"><primary>schro_list_insert</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                schro_list_insert                   (<parameter><link linkend="SchroList"><type>SchroList</type></link> *list</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> i</parameter>,
+                                                         <parameter><link linkend="void"><type>void</type></link> *value</parameter>);</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="schro-list-new" role="function">
+<title>schro_list_new ()</title>
+<indexterm zone="schro-list-new"><primary>schro_list_new</primary></indexterm>
+<programlisting><link linkend="SchroList"><returnvalue>SchroList</returnvalue></link> *         schro_list_new                      (<parameter><type>void</type></parameter>);</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="schro-list-new-full" role="function">
+<title>schro_list_new_full ()</title>
+<indexterm zone="schro-list-new-full"><primary>schro_list_new_full</primary></indexterm>
+<programlisting><link linkend="SchroList"><returnvalue>SchroList</returnvalue></link> *         schro_list_new_full                 (<parameter><link linkend="SchroListFreeFunc"><type>SchroListFreeFunc</type></link> freefunc</parameter>,
+                                                         <parameter><link linkend="void"><type>void</type></link> *priv</parameter>);</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="schro-list-prepend" role="function">
+<title>schro_list_prepend ()</title>
+<indexterm zone="schro-list-prepend"><primary>schro_list_prepend</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                schro_list_prepend                  (<parameter><link linkend="SchroList"><type>SchroList</type></link> *list</parameter>,
+                                                         <parameter><link linkend="void"><type>void</type></link> *value</parameter>);</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="schro-list-remove" role="function">
+<title>schro_list_remove ()</title>
+<indexterm zone="schro-list-remove"><primary>schro_list_remove</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link> *              schro_list_remove                   (<parameter><link linkend="SchroList"><type>SchroList</type></link> *list</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> i</parameter>);</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="schro-list-replace" role="function">
+<title>schro_list_replace ()</title>
+<indexterm zone="schro-list-replace"><primary>schro_list_replace</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link> *              schro_list_replace                  (<parameter><link linkend="SchroList"><type>SchroList</type></link> *list</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> i</parameter>,
+                                                         <parameter><link linkend="void"><type>void</type></link> *value</parameter>);</programlisting>
+<para>
+</para></refsect2>
+
+</refsect1>
+
+</refentry>

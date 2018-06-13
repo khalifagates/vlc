@@ -1,0 +1,229 @@
+<!-- ##### SECTION Title ##### -->
+orcopcode
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### USER_FUNCTION OrcOpcodeEmulateFunc ##### -->
+<para>
+
+</para>
+
+@ex: 
+@user: 
+
+
+<!-- ##### STRUCT OrcOpcodeExecutor ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### STRUCT OrcOpcodeSet ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### STRUCT OrcRuleSet ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### STRUCT OrcStaticOpcode ##### -->
+<para>
+
+</para>
+
+@name: 
+@flags: 
+@dest_size: 
+@src_size: 
+@emulateN: 
+
+<!-- ##### STRUCT OrcTarget ##### -->
+<para>
+
+</para>
+
+@name: 
+@executable: 
+@data_register_offset: 
+@get_default_flags: 
+@compiler_init: 
+@compile: 
+@rule_sets: 
+@n_rule_sets: 
+@get_asm_preamble: 
+@load_constant: 
+@get_flag_name: 
+@flush_cache: 
+@load_constant_long: 
+@_unused: 
+
+<!-- ##### MACRO ORC_OPCODE_N_ARGS ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### MACRO ORC_STATIC_OPCODE_ACCUMULATOR ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### MACRO ORC_STATIC_OPCODE_N_DEST ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### MACRO ORC_STATIC_OPCODE_N_SRC ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### FUNCTION orc_opcode_find_by_name ##### -->
+<para>
+
+</para>
+
+@name: 
+@Returns: 
+
+
+<!-- ##### FUNCTION orc_opcode_init ##### -->
+<para>
+
+</para>
+
+@void: 
+
+
+<!-- ##### FUNCTION orc_opcode_register_static ##### -->
+<para>
+
+</para>
+
+@sopcode: 
+@prefix: 
+@Returns: 
+
+
+<!-- ##### FUNCTION orc_opcode_set_find_by_name ##### -->
+<para>
+
+</para>
+
+@opcode_set: 
+@name: 
+@Returns: 
+
+
+<!-- ##### FUNCTION orc_opcode_set_get ##### -->
+<para>
+
+</para>
+
+@name: 
+@Returns: 
+
+
+<!-- ##### FUNCTION orc_rule_set_new ##### -->
+<para>
+
+</para>
+
+@opcode_set: 
+@target: 
+@required_flags: 
+@Returns: 
+
+
+<!-- ##### FUNCTION orc_target_get_asm_preamble ##### -->
+<para>
+
+</para>
+
+@target: 
+@Returns: 
+
+
+<!-- ##### FUNCTION orc_target_get_by_name ##### -->
+<para>
+
+</para>
+
+@target_name: 
+@Returns: 
+
+
+<!-- ##### FUNCTION orc_target_get_default ##### -->
+<para>
+
+</para>
+
+@void: 
+@Returns: 
+
+
+<!-- ##### FUNCTION orc_target_get_default_flags ##### -->
+<para>
+
+</para>
+
+@target: 
+@Returns: 
+
+
+<!-- ##### FUNCTION orc_target_get_name ##### -->
+<para>
+
+</para>
+
+@target: 
+@Returns: 
+
+
+<!-- ##### FUNCTION orc_target_get_rule ##### -->
+<para>
+
+</para>
+
+@target: 
+@opcode: 
+@target_flags: 
+@Returns: 
+
+
+<!-- ##### FUNCTION orc_target_register ##### -->
+<para>
+
+</para>
+
+@target: 
+
+

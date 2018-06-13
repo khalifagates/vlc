@@ -1,0 +1,14 @@
+prefix=
+exec_prefix=
+libdir=${pcfiledir}/schroedinger/
+includedir=${pcfiledir}/
+
+Name: schro-@SCHRO_MAJORMINOR@ uninstalled
+Description: Dirac codec library
+Version: @VERSION@
+Requires.private: @SCHRO_PKG_DEPS@
+Libs: -L${libdir} -lschroedinger-@SCHRO_MAJORMINOR@
+Libs.private: @PTHREAD_LIBS@ @LIBM@
+Cflags: -I${includedir} -I@srcdir@
+
+

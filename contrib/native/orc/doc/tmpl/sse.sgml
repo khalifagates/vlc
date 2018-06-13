@@ -1,0 +1,198 @@
+<!-- ##### SECTION Title ##### -->
+sse
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### MACRO ORC_SSE_SHUF ##### -->
+<para>
+
+</para>
+
+@a: 
+@b: 
+@c: 
+@d: 
+
+
+<!-- ##### FUNCTION orc_sse_emit_0f ##### -->
+<para>
+
+</para>
+
+@p: 
+@insn_name: 
+@code: 
+@src: 
+@dest: 
+
+
+<!-- ##### FUNCTION orc_sse_emit_660f ##### -->
+<para>
+
+</para>
+
+@p: 
+@insn_name: 
+@code: 
+@src: 
+@dest: 
+
+
+<!-- ##### FUNCTION orc_sse_emit_f20f ##### -->
+<para>
+
+</para>
+
+@p: 
+@insn_name: 
+@code: 
+@src: 
+@dest: 
+
+
+<!-- ##### FUNCTION orc_sse_emit_f30f ##### -->
+<para>
+
+</para>
+
+@p: 
+@insn_name: 
+@code: 
+@src: 
+@dest: 
+
+
+<!-- ##### FUNCTION orc_sse_emit_loadib ##### -->
+<para>
+
+</para>
+
+@p: 
+@reg: 
+@value: 
+
+
+<!-- ##### FUNCTION orc_sse_emit_loadil ##### -->
+<para>
+
+</para>
+
+@p: 
+@reg: 
+@value: 
+
+
+<!-- ##### FUNCTION orc_sse_emit_loadiw ##### -->
+<para>
+
+</para>
+
+@p: 
+@reg: 
+@value: 
+
+
+<!-- ##### FUNCTION orc_sse_emit_loadpb ##### -->
+<para>
+
+</para>
+
+@p: 
+@reg: 
+@value: 
+
+
+<!-- ##### FUNCTION orc_sse_emit_loadpl ##### -->
+<para>
+
+</para>
+
+@p: 
+@reg: 
+@value: 
+
+
+<!-- ##### FUNCTION orc_sse_emit_loadpq ##### -->
+<para>
+
+</para>
+
+@p: 
+@reg: 
+@value: 
+
+
+<!-- ##### FUNCTION orc_sse_emit_loadpw ##### -->
+<para>
+
+</para>
+
+@p: 
+@reg: 
+@value: 
+
+
+<!-- ##### FUNCTION orc_sse_emit_pshufd ##### -->
+<para>
+
+</para>
+
+@p: 
+@shuf: 
+@src: 
+@dest: 
+
+
+<!-- ##### FUNCTION orc_sse_emit_pshuflw ##### -->
+<para>
+
+</para>
+
+@p: 
+@shuf: 
+@src: 
+@dest: 
+
+
+<!-- ##### FUNCTION orc_sse_emit_shiftimm ##### -->
+<para>
+
+</para>
+
+@p: 
+@insn_name: 
+@code: 
+@modrm_code: 
+@shift: 
+@reg: 
+
+
+<!-- ##### FUNCTION orc_sse_get_cpu_flags ##### -->
+<para>
+
+</para>
+
+@Returns: 
+
+
+<!-- ##### FUNCTION orc_sse_init ##### -->
+<para>
+
+</para>
+
+
+

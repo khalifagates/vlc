@@ -1,0 +1,10 @@
+# Optional components
+option('vulkan', type: 'combo', choices: ['auto', 'true', 'false'],
+       description: 'Vulkan-based renderer')
+
+option('shaderc', type: 'combo', choices: ['auto', 'true', 'false'],
+       description: 'libshaderc SPIR-V compiler')
+
+# Miscellaneous
+option('tests', type: 'boolean', value: false,
+       description: 'Enable building the test cases')

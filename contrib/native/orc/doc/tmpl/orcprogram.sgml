@@ -1,0 +1,318 @@
+<!-- ##### SECTION Title ##### -->
+orcprogram
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### STRUCT OrcProgram ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### MACRO ORC_N_CONSTANTS ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### MACRO ORC_N_RULE_SETS ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### MACRO ORC_N_TARGETS ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### MACRO ORC_PROGRAM_ERROR ##### -->
+<para>
+
+</para>
+
+@program: 
+@...: 
+
+
+<!-- ##### FUNCTION orc_program_new ##### -->
+<para>
+
+</para>
+
+@void: 
+@Returns: 
+
+
+<!-- ##### FUNCTION orc_program_new_dss ##### -->
+<para>
+
+</para>
+
+@size1: 
+@size2: 
+@size3: 
+@Returns: 
+
+
+<!-- ##### FUNCTION orc_program_new_as ##### -->
+<para>
+
+</para>
+
+@size1: 
+@size2: 
+@Returns: 
+
+
+<!-- ##### FUNCTION orc_program_new_ass ##### -->
+<para>
+
+</para>
+
+@size1: 
+@size2: 
+@size3: 
+@Returns: 
+
+
+<!-- ##### FUNCTION orc_program_new_ds ##### -->
+<para>
+
+</para>
+
+@size1: 
+@size2: 
+@Returns: 
+
+
+<!-- ##### FUNCTION orc_program_free ##### -->
+<para>
+
+</para>
+
+@program: 
+
+
+<!-- ##### FUNCTION orc_program_get_name ##### -->
+<para>
+
+</para>
+
+@program: 
+@Returns: 
+
+
+<!-- ##### FUNCTION orc_program_set_name ##### -->
+<para>
+
+</para>
+
+@program: 
+@name: 
+
+
+<!-- ##### FUNCTION orc_program_add_temporary ##### -->
+<para>
+
+</para>
+
+@program: 
+@size: 
+@name: 
+@Returns: 
+
+
+<!-- ##### FUNCTION orc_program_add_source ##### -->
+<para>
+
+</para>
+
+@program: 
+@size: 
+@name: 
+@Returns: 
+
+
+<!-- ##### FUNCTION orc_program_add_destination ##### -->
+<para>
+
+</para>
+
+@program: 
+@size: 
+@name: 
+@Returns: 
+
+
+<!-- ##### FUNCTION orc_program_add_constant ##### -->
+<para>
+
+</para>
+
+@program: 
+@size: 
+@value: 
+@name: 
+@Returns: 
+
+
+<!-- ##### FUNCTION orc_program_add_accumulator ##### -->
+<para>
+
+</para>
+
+@program: 
+@size: 
+@name: 
+@Returns: 
+
+
+<!-- ##### FUNCTION orc_program_add_parameter ##### -->
+<para>
+
+</para>
+
+@program: 
+@size: 
+@name: 
+@Returns: 
+
+
+<!-- ##### FUNCTION orc_program_append ##### -->
+<para>
+
+</para>
+
+@p: 
+@opcode: 
+@arg0: 
+@arg1: 
+@arg2: 
+
+
+<!-- ##### FUNCTION orc_program_append_str ##### -->
+<para>
+
+</para>
+
+@p: 
+@opcode: 
+@arg0: 
+@arg1: 
+@arg2: 
+
+
+<!-- ##### FUNCTION orc_program_append_ds ##### -->
+<para>
+
+</para>
+
+@program: 
+@opcode: 
+@arg0: 
+@arg1: 
+
+
+<!-- ##### FUNCTION orc_program_append_ds_str ##### -->
+<para>
+
+</para>
+
+@p: 
+@opcode: 
+@arg0: 
+@arg1: 
+
+
+<!-- ##### FUNCTION orc_program_compile ##### -->
+<para>
+
+</para>
+
+@p: 
+@Returns: 
+
+
+<!-- ##### FUNCTION orc_program_compile_for_target ##### -->
+<para>
+
+</para>
+
+@p: 
+@target: 
+@Returns: 
+
+
+<!-- ##### FUNCTION orc_program_compile_full ##### -->
+<para>
+
+</para>
+
+@p: 
+@target: 
+@flags: 
+@Returns: 
+
+
+<!-- ##### FUNCTION orc_program_get_asm_code ##### -->
+<para>
+
+</para>
+
+@program: 
+@Returns: 
+
+
+<!-- ##### FUNCTION orc_program_find_var_by_name ##### -->
+<para>
+
+</para>
+
+@program: 
+@name: 
+@Returns: 
+
+
+<!-- ##### FUNCTION orc_program_allocate_register ##### -->
+<para>
+
+</para>
+
+@program: 
+@is_data: 
+@Returns: 
+
+
+<!-- ##### FUNCTION orc_program_dup_temporary ##### -->
+<para>
+
+</para>
+
+@program: 
+@i: 
+@j: 
+@Returns: 
+
+

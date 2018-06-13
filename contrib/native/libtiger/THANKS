@@ -1,0 +1,8 @@
+yselkowitz/Cygwin Ports project
+  build fix for Cygwin/Mingw32
+
+Alexis Ballier
+  build fix when doxygen isn't found
+
+Gregory Maxwell
+  testing with clang

@@ -1,0 +1,3 @@
+/home/boogie/vlc/contrib/x86_64-linux-gnu/lib/libgme.a
+/home/boogie/vlc/contrib/x86_64-linux-gnu/include/gme/gme.h
+/home/boogie/vlc/contrib/x86_64-linux-gnu/lib/pkgconfig/libgme.pc

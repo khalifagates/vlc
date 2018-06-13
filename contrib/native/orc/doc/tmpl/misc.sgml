@@ -1,0 +1,158 @@
+<!-- ##### SECTION Title ##### -->
+misc
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### STRUCT OrcVariable ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### STRUCT OrcInstruction ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### STRUCT OrcRule ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### STRUCT OrcFixup ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### USER_FUNCTION OrcRuleEmitFunc ##### -->
+<para>
+
+</para>
+
+@p: 
+@user: 
+@insn: 
+
+
+<!-- ##### MACRO ORC_N_REGS ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### MACRO ORC_N_INSNS ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### MACRO ORC_N_VARIABLES ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### MACRO ORC_N_REGISTERS ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### MACRO ORC_N_FIXUPS ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### MACRO ORC_N_LABELS ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### MACRO ORC_GP_REG_BASE ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### MACRO ORC_VEC_REG_BASE ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### ENUM OrcVarType ##### -->
+<para>
+
+</para>
+
+@ORC_VAR_TYPE_TEMP: 
+@ORC_VAR_TYPE_SRC: 
+@ORC_VAR_TYPE_DEST: 
+@ORC_VAR_TYPE_CONST: 
+@ORC_VAR_TYPE_PARAM: 
+@ORC_VAR_TYPE_ACCUMULATOR: 
+
+<!-- ##### FUNCTION orc_powerpc_init ##### -->
+<para>
+
+</para>
+
+@void: 
+
+
+<!-- ##### FUNCTION orc_arm_init ##### -->
+<para>
+
+</para>
+
+@void: 
+
+
+<!-- ##### FUNCTION orc_c_init ##### -->
+<para>
+
+</para>
+
+@void: 
+
+
+<!-- ##### FUNCTION orc_parse ##### -->
+<para>
+
+</para>
+
+@code: 
+@programs: 
+@Returns: 
+
+

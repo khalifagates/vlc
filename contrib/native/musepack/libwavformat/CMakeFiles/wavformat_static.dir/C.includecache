@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/boogie/vlc/contrib/native/musepack/libwavformat/input.c
+libwaveformat.h
+/home/boogie/vlc/contrib/native/musepack/libwavformat/libwaveformat.h
+
+/home/boogie/vlc/contrib/native/musepack/libwavformat/libwaveformat.h
+stdint.h
+-
+
+/home/boogie/vlc/contrib/native/musepack/libwavformat/output.c
+libwaveformat.h
+/home/boogie/vlc/contrib/native/musepack/libwavformat/libwaveformat.h
+

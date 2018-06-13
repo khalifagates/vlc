@@ -1,0 +1,1089 @@
+<!-- ##### SECTION ./tmpl/mmx.sgml:Long_Description ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SECTION ./tmpl/mmx.sgml:See_Also ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SECTION ./tmpl/mmx.sgml:Short_Description ##### -->
+
+
+
+<!-- ##### SECTION ./tmpl/mmx.sgml:Stability_Level ##### -->
+
+
+
+<!-- ##### SECTION ./tmpl/mmx.sgml:Title ##### -->
+mmx
+
+
+<!-- ##### SECTION ./tmpl/sse.sgml:Long_Description ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SECTION ./tmpl/sse.sgml:See_Also ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SECTION ./tmpl/sse.sgml:Short_Description ##### -->
+
+
+
+<!-- ##### SECTION ./tmpl/sse.sgml:Stability_Level ##### -->
+
+
+
+<!-- ##### SECTION ./tmpl/sse.sgml:Title ##### -->
+sse
+
+
+<!-- ##### SECTION ./tmpl/x86.sgml:Long_Description ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SECTION ./tmpl/x86.sgml:See_Also ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SECTION ./tmpl/x86.sgml:Short_Description ##### -->
+
+
+
+<!-- ##### SECTION ./tmpl/x86.sgml:Stability_Level ##### -->
+
+
+
+<!-- ##### SECTION ./tmpl/x86.sgml:Title ##### -->
+x86
+
+
+<!-- ##### MACRO ARRAY_SIZE ##### -->
+<para>
+
+</para>
+
+@x: 
+
+<!-- ##### MACRO MAX ##### -->
+<para>
+
+</para>
+
+@a: 
+@b: 
+
+<!-- ##### MACRO MIN ##### -->
+<para>
+
+</para>
+
+@a: 
+@b: 
+
+<!-- ##### MACRO ORC_ARM_A1 ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### MACRO ORC_ARM_A2 ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### MACRO ORC_ARM_A3 ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### MACRO ORC_ARM_A4 ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### MACRO ORC_ARM_IP ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### MACRO ORC_ARM_LR ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### MACRO ORC_ARM_PC ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### MACRO ORC_ARM_R0 ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### MACRO ORC_ARM_SB ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### MACRO ORC_ARM_SP ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### MACRO ORC_ARM_V1 ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### MACRO ORC_ARM_V2 ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### MACRO ORC_ARM_V3 ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### MACRO ORC_ARM_V4 ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### MACRO ORC_ARM_V5 ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### MACRO ORC_ARM_V6 ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### MACRO ORC_ARM_V7 ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### MACRO ORC_ARM_V8 ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### MACRO ORC_BEGIN_DECLS ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### MACRO ORC_CLAMP ##### -->
+<para>
+
+</para>
+
+@x: 
+@a: 
+@b: 
+
+<!-- ##### MACRO ORC_END_DECLS ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### MACRO ORC_EXPORT ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### MACRO ORC_GNUC_PREREQ ##### -->
+<para>
+
+</para>
+
+@maj: 
+@min: 
+
+<!-- ##### MACRO ORC_GNU_PRINTF ##### -->
+<para>
+
+</para>
+
+@a: 
+@b: 
+
+<!-- ##### MACRO ORC_INTERNAL ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### MACRO ORC_OPCODE_N_RULES ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### MACRO ORC_PTR_TO_INT ##### -->
+<para>
+
+</para>
+
+@x: 
+
+<!-- ##### MACRO ORC_READ_UINT32_LE ##### -->
+<para>
+
+</para>
+
+@ptr: 
+
+<!-- ##### MACRO ORC_REGCLASS_GP ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### MACRO ORC_STRUCT_OFFSET ##### -->
+<para>
+
+</para>
+
+@struct_type: 
+@member: 
+
+<!-- ##### MACRO ORC_VEC1_REG_BASE ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### MACRO ORC_VEC2_REG_BASE ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### MACRO ORC_WRITE_UINT32_LE ##### -->
+<para>
+
+</para>
+
+@ptr: 
+@val: 
+
+<!-- ##### STRUCT OrcArgument ##### -->
+<para>
+
+</para>
+
+@var: 
+@is_indirect: 
+@is_indexed: 
+@index_var: 
+@index_scale: 
+
+<!-- ##### STRUCT OrcOpcode ##### -->
+<para>
+
+</para>
+
+@name: 
+@n_src: 
+@n_dest: 
+@dest_size: 
+@src_size: 
+@rules: 
+@emulate: 
+@emulate_user: 
+
+<!-- ##### STRUCT OrcRegister ##### -->
+<para>
+
+</para>
+
+@var: 
+@is_data: 
+@is_chained: 
+@chained_reg: 
+@merge: 
+
+<!-- ##### STRUCT OrcType ##### -->
+<para>
+
+</para>
+
+@name: 
+@size: 
+
+<!-- ##### FUNCTION get_cpuinfo_line ##### -->
+<para>
+
+</para>
+
+@cpuinfo: 
+@tag: 
+@Returns: 
+
+<!-- ##### FUNCTION get_file ##### -->
+<para>
+
+</para>
+
+@file: 
+@Returns: 
+
+<!-- ##### FUNCTION get_file_int ##### -->
+<para>
+
+</para>
+
+@file: 
+@value: 
+@Returns: 
+
+<!-- ##### FUNCTION get_tag_value ##### -->
+<para>
+
+</para>
+
+@s: 
+@tag: 
+@Returns: 
+
+<!-- ##### FUNCTION mmx_emit_loadi_s16 ##### -->
+<para>
+
+</para>
+
+@p: 
+@reg: 
+@value: 
+
+<!-- ##### FUNCTION orc_arm_emit_dp_reg ##### -->
+<para>
+
+</para>
+
+@compiler: 
+@cond: 
+@opcode: 
+@dest: 
+@src1: 
+@src2: 
+
+<!-- ##### FUNCTION orc_arm_emit_loadimm ##### -->
+<para>
+
+</para>
+
+@compiler: 
+@dest: 
+@imm: 
+
+<!-- ##### TYPEDEF orc_bool ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### FUNCTION orc_compiler_allocate_codemem ##### -->
+<para>
+
+</para>
+
+@compiler: 
+
+<!-- ##### FUNCTION orc_compiler_get_dest ##### -->
+<para>
+
+</para>
+
+@compiler: 
+@Returns: 
+
+<!-- ##### FUNCTION orc_program_allocate_codemem ##### -->
+<para>
+
+</para>
+
+@program: 
+
+<!-- ##### FUNCTION orc_program_assemble_c ##### -->
+<para>
+
+</para>
+
+@p: 
+
+<!-- ##### FUNCTION orc_program_assemble_powerpc ##### -->
+<para>
+
+</para>
+
+@p: 
+
+<!-- ##### FUNCTION orc_program_assemble_x86 ##### -->
+<para>
+
+</para>
+
+@p: 
+
+<!-- ##### FUNCTION orc_program_dump_asm ##### -->
+<para>
+
+</para>
+
+@program: 
+
+<!-- ##### FUNCTION orc_program_dump_code ##### -->
+<para>
+
+</para>
+
+@program: 
+
+<!-- ##### FUNCTION orc_program_get_max_var_size ##### -->
+<para>
+
+</para>
+
+@program: 
+@Returns: 
+
+<!-- ##### FUNCTION orc_program_powerpc_allocate_register ##### -->
+<para>
+
+</para>
+
+@program: 
+@is_data: 
+@Returns: 
+
+<!-- ##### FUNCTION orc_program_powerpc_init ##### -->
+<para>
+
+</para>
+
+@p: 
+
+<!-- ##### FUNCTION orc_program_powerpc_reset_alloc ##### -->
+<para>
+
+</para>
+
+@program: 
+
+<!-- ##### FUNCTION orc_program_x86_allocate_register ##### -->
+<para>
+
+</para>
+
+@program: 
+@is_data: 
+@Returns: 
+
+<!-- ##### FUNCTION orc_program_x86_init ##### -->
+<para>
+
+</para>
+
+@p: 
+
+<!-- ##### FUNCTION orc_program_x86_register_rules ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### FUNCTION orc_program_x86_reset_alloc ##### -->
+<para>
+
+</para>
+
+@program: 
+
+<!-- ##### FUNCTION orc_sse_emit_0f ##### -->
+<para>
+
+</para>
+
+@p: 
+@insn_name: 
+@code: 
+@src: 
+@dest: 
+
+<!-- ##### FUNCTION orc_sse_emit_660f ##### -->
+<para>
+
+</para>
+
+@p: 
+@insn_name: 
+@code: 
+@src: 
+@dest: 
+
+<!-- ##### FUNCTION orc_sse_emit_f20f ##### -->
+<para>
+
+</para>
+
+@p: 
+@insn_name: 
+@code: 
+@src: 
+@dest: 
+
+<!-- ##### FUNCTION orc_sse_emit_f30f ##### -->
+<para>
+
+</para>
+
+@p: 
+@insn_name: 
+@code: 
+@src: 
+@dest: 
+
+<!-- ##### FUNCTION orc_sse_emit_loadib ##### -->
+<para>
+
+</para>
+
+@p: 
+@reg: 
+@value: 
+
+<!-- ##### FUNCTION orc_sse_emit_loadil ##### -->
+<para>
+
+</para>
+
+@p: 
+@reg: 
+@value: 
+
+<!-- ##### FUNCTION orc_sse_emit_loadiw ##### -->
+<para>
+
+</para>
+
+@p: 
+@reg: 
+@value: 
+
+<!-- ##### FUNCTION orc_sse_emit_loadpb ##### -->
+<para>
+
+</para>
+
+@p: 
+@reg: 
+@value: 
+
+<!-- ##### FUNCTION orc_sse_emit_loadpl ##### -->
+<para>
+
+</para>
+
+@p: 
+@reg: 
+@value: 
+
+<!-- ##### FUNCTION orc_sse_emit_loadpq ##### -->
+<para>
+
+</para>
+
+@p: 
+@reg: 
+@value: 
+
+<!-- ##### FUNCTION orc_sse_emit_loadpw ##### -->
+<para>
+
+</para>
+
+@p: 
+@reg: 
+@value: 
+
+<!-- ##### FUNCTION orc_sse_emit_shiftimm ##### -->
+<para>
+
+</para>
+
+@p: 
+@insn_name: 
+@code: 
+@modrm_code: 
+@shift: 
+@reg: 
+
+<!-- ##### FUNCTION orc_type_get ##### -->
+<para>
+
+</para>
+
+@name: 
+@Returns: 
+
+<!-- ##### FUNCTION orc_type_register ##### -->
+<para>
+
+</para>
+
+@name: 
+@size: 
+
+<!-- ##### FUNCTION orc_variable_get_size ##### -->
+<para>
+
+</para>
+
+@var: 
+@Returns: 
+
+<!-- ##### FUNCTION orc_x86_emit_mov_reg_sse ##### -->
+<para>
+
+</para>
+
+@compiler: 
+@reg1: 
+@reg2: 
+
+<!-- ##### FUNCTION orc_x86_emit_mov_sse_reg ##### -->
+<para>
+
+</para>
+
+@compiler: 
+@reg1: 
+@reg2: 
+
+<!-- ##### FUNCTION orc_x86_emit_mov_sse_reg_reg ##### -->
+<para>
+
+</para>
+
+@compiler: 
+@reg1: 
+@reg2: 
+
+<!-- ##### FUNCTION orc_x86_init ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### FUNCTION powerpc_flush ##### -->
+<para>
+
+</para>
+
+@compiler: 
+
+<!-- ##### FUNCTION strsplit ##### -->
+<para>
+
+</para>
+
+@s: 
+@delimiter: 
+@Returns: 
+
+<!-- ##### VARIABLE x86_64 ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### FUNCTION x86_emit_add_imm_memoffset ##### -->
+<para>
+
+</para>
+
+@compiler: 
+@size: 
+@value: 
+@offset: 
+@reg: 
+
+<!-- ##### FUNCTION x86_emit_add_imm_reg ##### -->
+<para>
+
+</para>
+
+@compiler: 
+@size: 
+@value: 
+@reg: 
+
+<!-- ##### FUNCTION x86_emit_and_imm_memoffset ##### -->
+<para>
+
+</para>
+
+@compiler: 
+@size: 
+@value: 
+@offset: 
+@reg: 
+
+<!-- ##### FUNCTION x86_emit_and_imm_reg ##### -->
+<para>
+
+</para>
+
+@compiler: 
+@size: 
+@value: 
+@reg: 
+
+<!-- ##### FUNCTION x86_emit_cmp_imm_memoffset ##### -->
+<para>
+
+</para>
+
+@compiler: 
+@size: 
+@value: 
+@offset: 
+@reg: 
+
+<!-- ##### FUNCTION x86_emit_dec_memoffset ##### -->
+<para>
+
+</para>
+
+@compiler: 
+@size: 
+@offset: 
+@reg: 
+
+<!-- ##### FUNCTION x86_emit_emms ##### -->
+<para>
+
+</para>
+
+@compiler: 
+
+<!-- ##### FUNCTION x86_emit_je ##### -->
+<para>
+
+</para>
+
+@compiler: 
+@label: 
+
+<!-- ##### FUNCTION x86_emit_jne ##### -->
+<para>
+
+</para>
+
+@compiler: 
+@label: 
+
+<!-- ##### FUNCTION x86_emit_label ##### -->
+<para>
+
+</para>
+
+@compiler: 
+@label: 
+
+<!-- ##### FUNCTION x86_emit_modrm_memoffset ##### -->
+<para>
+
+</para>
+
+@compiler: 
+@reg1: 
+@offset: 
+@reg2: 
+
+<!-- ##### FUNCTION x86_emit_modrm_reg ##### -->
+<para>
+
+</para>
+
+@compiler: 
+@reg1: 
+@reg2: 
+
+<!-- ##### FUNCTION x86_emit_mov_imm_reg ##### -->
+<para>
+
+</para>
+
+@compiler: 
+@size: 
+@value: 
+@reg1: 
+
+<!-- ##### FUNCTION x86_emit_mov_memoffset_mmx ##### -->
+<para>
+
+</para>
+
+@compiler: 
+@size: 
+@offset: 
+@reg1: 
+@reg2: 
+
+<!-- ##### FUNCTION x86_emit_mov_memoffset_reg ##### -->
+<para>
+
+</para>
+
+@compiler: 
+@size: 
+@offset: 
+@reg1: 
+@reg2: 
+
+<!-- ##### FUNCTION x86_emit_mov_memoffset_sse ##### -->
+<para>
+
+</para>
+
+@compiler: 
+@size: 
+@offset: 
+@reg1: 
+@reg2: 
+@is_aligned: 
+
+<!-- ##### FUNCTION x86_emit_mov_mmx_memoffset ##### -->
+<para>
+
+</para>
+
+@compiler: 
+@size: 
+@reg1: 
+@offset: 
+@reg2: 
+
+<!-- ##### FUNCTION x86_emit_mov_mmx_reg ##### -->
+<para>
+
+</para>
+
+@compiler: 
+@reg1: 
+@reg2: 
+
+<!-- ##### FUNCTION x86_emit_mov_reg_memoffset ##### -->
+<para>
+
+</para>
+
+@compiler: 
+@size: 
+@reg1: 
+@offset: 
+@reg2: 
+
+<!-- ##### FUNCTION x86_emit_mov_reg_mmx ##### -->
+<para>
+
+</para>
+
+@compiler: 
+@reg1: 
+@reg2: 
+
+<!-- ##### FUNCTION x86_emit_mov_reg_reg ##### -->
+<para>
+
+</para>
+
+@compiler: 
+@size: 
+@reg1: 
+@reg2: 
+
+<!-- ##### FUNCTION x86_emit_mov_reg_sse ##### -->
+<para>
+
+</para>
+
+@compiler: 
+@reg1: 
+@reg2: 
+
+<!-- ##### FUNCTION x86_emit_mov_sse_memoffset ##### -->
+<para>
+
+</para>
+
+@compiler: 
+@size: 
+@reg1: 
+@offset: 
+@reg2: 
+@aligned: 
+@uncached: 
+
+<!-- ##### FUNCTION x86_emit_mov_sse_reg ##### -->
+<para>
+
+</para>
+
+@compiler: 
+@reg1: 
+@reg2: 
+
+<!-- ##### FUNCTION x86_emit_pop ##### -->
+<para>
+
+</para>
+
+@compiler: 
+@size: 
+@reg: 
+
+<!-- ##### FUNCTION x86_emit_push ##### -->
+<para>
+
+</para>
+
+@compiler: 
+@size: 
+@reg: 
+
+<!-- ##### FUNCTION x86_emit_ret ##### -->
+<para>
+
+</para>
+
+@compiler: 
+
+<!-- ##### FUNCTION x86_emit_sar_imm_reg ##### -->
+<para>
+
+</para>
+
+@compiler: 
+@size: 
+@value: 
+@reg: 
+
+<!-- ##### FUNCTION x86_emit_test_reg_reg ##### -->
+<para>
+
+</para>
+
+@compiler: 
+@size: 
+@reg1: 
+@reg2: 
+
+<!-- ##### VARIABLE x86_exec_ptr ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### FUNCTION x86_get_regname ##### -->
+<para>
+
+</para>
+
+@i: 
+@Returns: 
+
+<!-- ##### FUNCTION x86_get_regname_16 ##### -->
+<para>
+
+</para>
+
+@i: 
+@Returns: 
+
+<!-- ##### FUNCTION x86_get_regname_64 ##### -->
+<para>
+
+</para>
+
+@i: 
+@Returns: 
+
+<!-- ##### FUNCTION x86_get_regname_mmx ##### -->
+<para>
+
+</para>
+
+@i: 
+@Returns: 
+
+<!-- ##### FUNCTION x86_get_regname_ptr ##### -->
+<para>
+
+</para>
+
+@compiler: 
+@i: 
+@Returns: 
+
+<!-- ##### FUNCTION x86_get_regname_sse ##### -->
+<para>
+
+</para>
+
+@i: 
+@Returns: 
+
+<!-- ##### FUNCTION x86_get_regnum ##### -->
+<para>
+
+</para>
+
+@i: 
+@Returns: 
+
+<!-- ##### FUNCTION x86_test ##### -->
+<para>
+
+</para>
+
+@compiler: 
+

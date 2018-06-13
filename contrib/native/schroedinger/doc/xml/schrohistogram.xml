@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" 
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd">
+<refentry id="schroedinger-schrohistogram">
+<refmeta>
+<refentrytitle role="top_of_page" id="schroedinger-schrohistogram.top_of_page">schrohistogram</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>
+  SCHROEDINGER Library
+</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>schrohistogram</refname>
+<refpurpose></refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="schroedinger-schrohistogram.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+
+<synopsis><link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="schro-histogram-table-generate">schro_histogram_table_generate</link>      (<parameter><link linkend="SchroHistogramTable"><type>SchroHistogramTable</type></link> *table</parameter>,
+                                                         <parameter><link linkend="double"><type>double</type></link> (*func) (int value, void *priv)</parameter>,
+                                                         <parameter><link linkend="void"><type>void</type></link> *priv</parameter>);
+</synopsis>
+</refsynopsisdiv>
+
+<refsect1 id="schroedinger-schrohistogram.description" role="desc">
+<title role="desc.title">Description</title>
+<para>
+</para>
+</refsect1>
+<refsect1 id="schroedinger-schrohistogram.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="schro-histogram-table-generate" role="function">
+<title>schro_histogram_table_generate ()</title>
+<indexterm zone="schro-histogram-table-generate"><primary>schro_histogram_table_generate</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                schro_histogram_table_generate      (<parameter><link linkend="SchroHistogramTable"><type>SchroHistogramTable</type></link> *table</parameter>,
+                                                         <parameter><link linkend="double"><type>double</type></link> (*func) (int value, void *priv)</parameter>,
+                                                         <parameter><link linkend="void"><type>void</type></link> *priv</parameter>);</programlisting>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>table</parameter>&#160;:</term>
+<listitem><simpara><parameter>int</parameter> value, void *priv:
+<parameter>int</parameter> value, void *priv:
+<parameter>int</parameter> value, void *priv:
+<parameter>int</parameter> value, void *priv:
+<parameter>int</parameter> value, void *priv:
+<parameter>int</parameter> value, void *priv:
+<parameter>int</parameter> value, void *priv:
+<parameter>int</parameter> value, void *priv:
+<parameter>int</parameter> value, void *priv:
+<parameter>int</parameter> value, void *priv:
+<parameter>int</parameter> value, void *priv:
+<parameter>int</parameter> value, void *priv:
+<parameter>int</parameter> value, void *priv:
+<parameter>int</parameter> value, void *priv:
+<parameter>int</parameter> value, void *priv:
+<parameter>int</parameter> value, void *priv:
+<parameter>int</parameter> value, void *priv:
+<parameter>int</parameter> value, void *priv:
+<parameter>int</parameter> value, void *priv:
+<parameter>int</parameter> value, void *priv:
+<parameter>int</parameter> value, void *priv:
+<parameter>int</parameter> value, void *priv:
+<parameter>int</parameter> value, void *priv:
+<parameter>int</parameter> value, void *priv:
+<parameter>int</parameter> value, void *priv:
+<parameter>int</parameter> value, void *priv:
+<parameter>int</parameter> value, void *priv:
+<parameter>int</parameter> value, void *priv:
+<parameter>int</parameter> value, void *priv:
+<parameter>int</parameter> value, void *priv:
+<parameter>int</parameter> value, void *priv:
+<parameter>int</parameter> value, void *priv:
+<parameter>int</parameter> value, void *priv:
+<parameter>int</parameter> value, void *priv:
+<parameter>int</parameter> value, void *priv:
+<parameter>int</parameter> value, void *priv:
+<parameter>int</parameter> value, void *priv:
+<parameter>int</parameter> value, void *priv:
+<parameter>int</parameter> value, void *priv:
+<parameter>int</parameter> value, void *priv:
+<parameter>int</parameter> value, void *priv:
+<parameter>int</parameter> value, void *priv:
+<parameter>int</parameter> value, void *priv:
+<parameter>int</parameter> value, void *priv:
+<parameter>int</parameter> value, void *priv:
+<parameter>int</parameter> value, void *priv:
+<parameter>int</parameter> value, void *priv:
+<parameter>int</parameter> value, void *priv:
+<parameter>int</parameter> value, void *priv:
+<parameter>int</parameter> value, void *priv:
+<parameter>int</parameter> value, void *priv:
+<parameter>int</parameter> value, void *priv:
+<parameter>int</parameter> value, void *priv:
+<parameter>int</parameter> value, void *priv:
+<parameter>int</parameter> value, void *priv:</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+
+</refentry>

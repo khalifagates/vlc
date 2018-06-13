@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" 
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd">
+<refentry id="schroedinger-schrosubband">
+<refmeta>
+<refentrytitle role="top_of_page" id="schroedinger-schrosubband.top_of_page">schrosubband</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>
+  SCHROEDINGER Library
+</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>schrosubband</refname>
+<refpurpose></refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="schroedinger-schrosubband.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+
+<synopsis>#define             <link linkend="SCHRO-SUBBAND-IS-HORIZONTALLY-ORIENTED:CAPS">SCHRO_SUBBAND_IS_HORIZONTALLY_ORIENTED</link>(position)
+#define             <link linkend="SCHRO-SUBBAND-IS-VERTICALLY-ORIENTED:CAPS">SCHRO_SUBBAND_IS_VERTICALLY_ORIENTED</link>(position)
+#define             <link linkend="SCHRO-SUBBAND-SHIFT:CAPS">SCHRO_SUBBAND_SHIFT</link>                 (position)
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="schro-subband-get-frame-data">schro_subband_get_frame_data</link>        (<parameter><link linkend="SchroFrameData"><type>SchroFrameData</type></link> *dest</parameter>,
+                                                         <parameter><link linkend="SchroFrame"><type>SchroFrame</type></link> *frame</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> component</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> position</parameter>,
+                                                         <parameter><link linkend="SchroParams"><type>SchroParams</type></link> *params</parameter>);
+<link linkend="int"><returnvalue>int</returnvalue></link>                 <link linkend="schro-subband-get-position">schro_subband_get_position</link>          (<parameter><link linkend="int"><type>int</type></link> index</parameter>);
+</synopsis>
+</refsynopsisdiv>
+
+<refsect1 id="schroedinger-schrosubband.description" role="desc">
+<title role="desc.title">Description</title>
+<para>
+</para>
+</refsect1>
+<refsect1 id="schroedinger-schrosubband.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="SCHRO-SUBBAND-IS-HORIZONTALLY-ORIENTED:CAPS" role="macro">
+<title>SCHRO_SUBBAND_IS_HORIZONTALLY_ORIENTED()</title>
+<indexterm zone="SCHRO-SUBBAND-IS-HORIZONTALLY-ORIENTED:CAPS"><primary>SCHRO_SUBBAND_IS_HORIZONTALLY_ORIENTED</primary></indexterm>
+<programlisting>#define SCHRO_SUBBAND_IS_HORIZONTALLY_ORIENTED(position) (((position)&amp;3) == 2)
+</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="SCHRO-SUBBAND-IS-VERTICALLY-ORIENTED:CAPS" role="macro">
+<title>SCHRO_SUBBAND_IS_VERTICALLY_ORIENTED()</title>
+<indexterm zone="SCHRO-SUBBAND-IS-VERTICALLY-ORIENTED:CAPS"><primary>SCHRO_SUBBAND_IS_VERTICALLY_ORIENTED</primary></indexterm>
+<programlisting>#define SCHRO_SUBBAND_IS_VERTICALLY_ORIENTED(position) (((position)&amp;3) == 1)
+</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="SCHRO-SUBBAND-SHIFT:CAPS" role="macro">
+<title>SCHRO_SUBBAND_SHIFT()</title>
+<indexterm zone="SCHRO-SUBBAND-SHIFT:CAPS"><primary>SCHRO_SUBBAND_SHIFT</primary></indexterm>
+<programlisting>#define SCHRO_SUBBAND_SHIFT(position) ((position)&gt;&gt;2)
+</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="schro-subband-get-frame-data" role="function">
+<title>schro_subband_get_frame_data ()</title>
+<indexterm zone="schro-subband-get-frame-data"><primary>schro_subband_get_frame_data</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                schro_subband_get_frame_data        (<parameter><link linkend="SchroFrameData"><type>SchroFrameData</type></link> *dest</parameter>,
+                                                         <parameter><link linkend="SchroFrame"><type>SchroFrame</type></link> *frame</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> component</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> position</parameter>,
+                                                         <parameter><link linkend="SchroParams"><type>SchroParams</type></link> *params</parameter>);</programlisting>
+<para>
+</para></refsect2>
+<refsect2 id="schro-subband-get-position" role="function">
+<title>schro_subband_get_position ()</title>
+<indexterm zone="schro-subband-get-position"><primary>schro_subband_get_position</primary></indexterm>
+<programlisting><link linkend="int"><returnvalue>int</returnvalue></link>                 schro_subband_get_position          (<parameter><link linkend="int"><type>int</type></link> index</parameter>);</programlisting>
+<para>
+</para></refsect2>
+
+</refsect1>
+
+</refentry>

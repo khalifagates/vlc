@@ -1,0 +1,110 @@
+<!-- ##### SECTION Title ##### -->
+orcsse
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### ENUM OrcSSERegister ##### -->
+<para>
+
+</para>
+
+@X86_XMM0: 
+@X86_XMM1: 
+@X86_XMM2: 
+@X86_XMM3: 
+@X86_XMM4: 
+@X86_XMM5: 
+@X86_XMM6: 
+@X86_XMM7: 
+@X86_XMM8: 
+@X86_XMM9: 
+@X86_XMM10: 
+@X86_XMM11: 
+@X86_XMM12: 
+@X86_XMM13: 
+@X86_XMM14: 
+@X86_XMM15: 
+
+<!-- ##### ENUM OrcTargetSSEFlags ##### -->
+<para>
+
+</para>
+
+@ORC_TARGET_SSE_SSE2: 
+@ORC_TARGET_SSE_SSE3: 
+@ORC_TARGET_SSE_SSSE3: 
+@ORC_TARGET_SSE_SSE4_1: 
+@ORC_TARGET_SSE_SSE4_2: 
+@ORC_TARGET_SSE_SSE4A: 
+@ORC_TARGET_SSE_SSE5: 
+@ORC_TARGET_SSE_FRAME_POINTER: 
+@ORC_TARGET_SSE_SHORT_JUMPS: 
+@ORC_TARGET_SSE_64BIT: 
+
+<!-- ##### MACRO ORC_SSE_SHUF ##### -->
+<para>
+
+</para>
+
+@a: 
+@b: 
+@c: 
+@d: 
+
+
+<!-- ##### MACRO orc_sse_emit_pshufd ##### -->
+<para>
+
+</para>
+
+@p: 
+@imm: 
+@a: 
+@b: 
+
+
+<!-- ##### MACRO orc_sse_emit_pshuflw ##### -->
+<para>
+
+</para>
+
+@p: 
+@imm: 
+@a: 
+@b: 
+
+
+<!-- ##### FUNCTION orc_sse_get_cpu_flags ##### -->
+<para>
+
+</para>
+
+@void: 
+@Returns: 
+
+
+<!-- ##### FUNCTION orc_sse_init ##### -->
+<para>
+
+</para>
+
+@void: 
+
+

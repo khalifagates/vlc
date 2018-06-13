@@ -1,0 +1,256 @@
+<!-- ##### SECTION Title ##### -->
+orcarm
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### ENUM OrcArmCond ##### -->
+<para>
+
+</para>
+
+@ORC_ARM_COND_EQ: 
+@ORC_ARM_COND_NE: 
+@ORC_ARM_COND_CS: 
+@ORC_ARM_COND_CC: 
+@ORC_ARM_COND_MI: 
+@ORC_ARM_COND_PL: 
+@ORC_ARM_COND_VS: 
+@ORC_ARM_COND_VC: 
+@ORC_ARM_COND_HI: 
+@ORC_ARM_COND_LS: 
+@ORC_ARM_COND_GE: 
+@ORC_ARM_COND_LT: 
+@ORC_ARM_COND_GT: 
+@ORC_ARM_COND_LE: 
+@ORC_ARM_COND_AL: 
+
+<!-- ##### ENUM OrcArmDP ##### -->
+<para>
+
+</para>
+
+@ORC_ARM_DP_AND: 
+@ORC_ARM_DP_EOR: 
+@ORC_ARM_DP_SUB: 
+@ORC_ARM_DP_RSB: 
+@ORC_ARM_DP_ADD: 
+@ORC_ARM_DP_ADC: 
+@ORC_ARM_DP_SBC: 
+@ORC_ARM_DP_RSC: 
+@ORC_ARM_DP_TST: 
+@ORC_ARM_DP_TEQ: 
+@ORC_ARM_DP_CMP: 
+@ORC_ARM_DP_CMN: 
+@ORC_ARM_DP_ORR: 
+@ORC_ARM_DP_MOV: 
+@ORC_ARM_DP_BIC: 
+@ORC_ARM_DP_MVN: 
+
+<!-- ##### ENUM OrcArmRegister ##### -->
+<para>
+
+</para>
+
+@ORC_ARM_A1: 
+@ORC_ARM_A2: 
+@ORC_ARM_A3: 
+@ORC_ARM_A4: 
+@ORC_ARM_V1: 
+@ORC_ARM_V2: 
+@ORC_ARM_V3: 
+@ORC_ARM_V4: 
+@ORC_ARM_V5: 
+@ORC_ARM_V6: 
+@ORC_ARM_V7: 
+@ORC_ARM_V8: 
+@ORC_ARM_IP: 
+@ORC_ARM_SP: 
+@ORC_ARM_LR: 
+@ORC_ARM_PC: 
+
+<!-- ##### FUNCTION orc_arm_do_fixups ##### -->
+<para>
+
+</para>
+
+@compiler: 
+
+
+<!-- ##### FUNCTION orc_arm_emit ##### -->
+<para>
+
+</para>
+
+@compiler: 
+@insn: 
+
+
+<!-- ##### FUNCTION orc_arm_emit_add ##### -->
+<para>
+
+</para>
+
+@compiler: 
+@dest: 
+@src1: 
+@src2: 
+
+
+<!-- ##### FUNCTION orc_arm_emit_add_imm ##### -->
+<para>
+
+</para>
+
+@compiler: 
+@dest: 
+@src1: 
+@value: 
+
+
+<!-- ##### FUNCTION orc_arm_emit_branch ##### -->
+<para>
+
+</para>
+
+@compiler: 
+@cond: 
+@label: 
+
+
+<!-- ##### FUNCTION orc_arm_emit_bx_lr ##### -->
+<para>
+
+</para>
+
+@compiler: 
+
+
+<!-- ##### FUNCTION orc_arm_emit_cmp_imm ##### -->
+<para>
+
+</para>
+
+@compiler: 
+@src1: 
+@value: 
+
+
+<!-- ##### FUNCTION orc_arm_emit_label ##### -->
+<para>
+
+</para>
+
+@compiler: 
+@label: 
+
+
+<!-- ##### FUNCTION orc_arm_emit_load_reg ##### -->
+<para>
+
+</para>
+
+@compiler: 
+@dest: 
+@src1: 
+@offset: 
+
+
+<!-- ##### FUNCTION orc_arm_emit_mov ##### -->
+<para>
+
+</para>
+
+@compiler: 
+@dest: 
+@src: 
+
+
+<!-- ##### FUNCTION orc_arm_emit_pop ##### -->
+<para>
+
+</para>
+
+@compiler: 
+@regs: 
+
+
+<!-- ##### FUNCTION orc_arm_emit_push ##### -->
+<para>
+
+</para>
+
+@compiler: 
+@regs: 
+
+
+<!-- ##### FUNCTION orc_arm_emit_sub ##### -->
+<para>
+
+</para>
+
+@compiler: 
+@dest: 
+@src1: 
+@src2: 
+
+
+<!-- ##### FUNCTION orc_arm_emit_sub_imm ##### -->
+<para>
+
+</para>
+
+@compiler: 
+@dest: 
+@src1: 
+@value: 
+@record: 
+
+
+<!-- ##### FUNCTION orc_arm_loadw ##### -->
+<para>
+
+</para>
+
+@compiler: 
+@dest: 
+@src1: 
+@offset: 
+
+
+<!-- ##### FUNCTION orc_arm_reg_name ##### -->
+<para>
+
+</para>
+
+@reg: 
+@Returns: 
+
+
+<!-- ##### FUNCTION orc_arm_storew ##### -->
+<para>
+
+</para>
+
+@compiler: 
+@dest: 
+@offset: 
+@src1: 
+
+

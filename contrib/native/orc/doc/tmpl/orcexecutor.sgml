@@ -1,0 +1,139 @@
+<!-- ##### SECTION Title ##### -->
+orcexecutor
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### STRUCT OrcExecutor ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### FUNCTION orc_executor_new ##### -->
+<para>
+
+</para>
+
+@program: 
+@Returns: 
+
+
+<!-- ##### FUNCTION orc_executor_free ##### -->
+<para>
+
+</para>
+
+@ex: 
+
+
+<!-- ##### FUNCTION orc_executor_set_array ##### -->
+<para>
+
+</para>
+
+@ex: 
+@var: 
+@ptr: 
+
+
+<!-- ##### FUNCTION orc_executor_set_array_str ##### -->
+<para>
+
+</para>
+
+@ex: 
+@name: 
+@ptr: 
+
+
+<!-- ##### FUNCTION orc_executor_set_n ##### -->
+<para>
+
+</para>
+
+@ex: 
+@n: 
+
+
+<!-- ##### FUNCTION orc_executor_emulate ##### -->
+<para>
+
+</para>
+
+@ex: 
+
+
+<!-- ##### FUNCTION orc_executor_run ##### -->
+<para>
+
+</para>
+
+@ex: 
+
+
+<!-- ##### FUNCTION orc_executor_get_accumulator ##### -->
+<para>
+
+</para>
+
+@ex: 
+@var: 
+@Returns: 
+
+
+<!-- ##### FUNCTION orc_executor_get_accumulator_str ##### -->
+<para>
+
+</para>
+
+@ex: 
+@name: 
+@Returns: 
+
+
+<!-- ##### FUNCTION orc_executor_set_param ##### -->
+<para>
+
+</para>
+
+@ex: 
+@var: 
+@value: 
+
+
+<!-- ##### FUNCTION orc_executor_set_param_str ##### -->
+<para>
+
+</para>
+
+@ex: 
+@name: 
+@value: 
+
+
+<!-- ##### FUNCTION orc_executor_set_program ##### -->
+<para>
+
+</para>
+
+@ex: 
+@program: 
+
+
